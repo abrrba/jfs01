@@ -9,3 +9,5 @@ Dattatray
 Dnyaneshwar
 Abhijeet
 Anand
+
+Teacher Name - Rishi
