@@ -1,15 +1,7 @@
 //not perfectly solved
 class Asga0128
 {
-public int is_zero(int num)
-{
-if(num==0)
-{
-return(1);
-}
-else
-{
-return(0);
+/* under construction */
 }
 }
 }
