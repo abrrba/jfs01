@@ -1,4 +1,4 @@
-class Asg_a0012{
+class Asg_a0011{
 public static int sum_of_digit(int num)
 {
 int sum1=0;
@@ -22,7 +22,7 @@ return(sum);
 
 }
 }
-public class AsgA0011{
+public class asg_a0011{
 public static void main(String args[])
 {
 Asg_a0011 obj=new Asg_a0011();
