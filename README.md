@@ -3,11 +3,11 @@ This repo is to track code of the repo JFS01
 
 # Students in this course are
 
-Avinash Erande 
-Akshay Chakrawarti
-Dattatraj Chavan
+Avinash Erande \n
+Akshay Chakrawarti \n
+Dattatraj Chavan \n
 Dnyaneshwar Jadhav 
-Abhijeet Gite  stu_a0004
-Anand Gae
+Abhijeet Gite \n
+Anand Gade \n
 
 Teacher Name - Rishi
