@@ -1,8 +1,7 @@
-class asg_a0001
+class AsgA0001
 {
-public static void main(String[] args)
+public static char st(String s1)
 {
-String s1=new String("HELLOWORLD");
 int x=s1.length();
 for(int i=0;i<x;i++)
 {
@@ -13,9 +12,11 @@ System.out.print(Character.toUpperCase(ch));
 }
 else
 {
-char ch=s1.charAt(i);
-System.out.print(Character.toLowerCase(ch));
+char c=s1.charAt(i);
+System.out.print(Character.toLowerCase(c));
 }
 }
+return(0);
 }
 }
+
