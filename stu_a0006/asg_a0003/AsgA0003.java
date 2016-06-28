@@ -1,10 +1,11 @@
-class asg_a0003
+class AsgA0003
 {
-public static void main(String[] args)
+public static char st(String s1)
 {
-String s1=new String("Hello World");
 int a=s1.length();
-for(int i=0;i<a;i++)
+char ser=s1.charAt(0);
+System.out.print(Character.toLowerCase(ser));
+for(int i=1;i<a;i++)
 {
 char x=s1.charAt(i);
 if(Character.isUpperCase(x))
@@ -17,5 +18,6 @@ char d=s1.charAt(i);
 System.out.print(Character.toUpperCase(d));
 }
 }
+return(0);
 }
 }
