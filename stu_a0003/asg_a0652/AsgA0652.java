@@ -1,7 +1,6 @@
 public class AsgA0652{
-	public static void main(String[] argv)
+	public static int find_min_max(int[] myList)
 	{
-		int[] myList={10,20,2,4};
 		for(int i=0;i<myList.length;i++)
 		{
 			System.out.println(myList [i]+" "); 
@@ -27,5 +26,7 @@ public class AsgA0652{
 				min=myList[i];
 		}
 		System.out.println("Min is "+min);
+		return(0);
 	}
 }
+
