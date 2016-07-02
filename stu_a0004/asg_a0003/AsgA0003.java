@@ -1,8 +1,7 @@
 class AsgA0003
 {
-public static void main(String args[])
+public static String alter_case_2(String str)
 {
-String str=new String("HelloWorld");
 char f=str.charAt(0);
 System.out.print(Character.toLowerCase(f));
 int count=str.length();
@@ -19,5 +18,6 @@ else
 System.out.print(Character.toUpperCase(n));
 }
 }
+return(str);
 }
 }
