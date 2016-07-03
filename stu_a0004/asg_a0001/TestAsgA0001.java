@@ -6,7 +6,7 @@ public class TestAsgA0001{
         public void test_01() {
             AsgA0001 obj  = new AsgA0001();
             String temp = obj.alter_case_1("HelloWorld");
-            assertEquals(temp, "HeLlOwOrLd");
+            assertEquals(temp, "HeLlOwOrLd");//if we change this output even after test file runs fine 
         }
     @Test
         public void test_02() {
