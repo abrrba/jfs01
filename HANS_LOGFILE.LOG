@@ -1,0 +1,2 @@
+INFO:root:Running command 1 '['liveCourse', 'get_registered_students', 'lvc_a0001'] '
+INFO:root:Running command 2 'liveCourse get_registered_students lvc_a0001 []'
