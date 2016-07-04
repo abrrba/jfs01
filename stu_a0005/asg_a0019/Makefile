@@ -1,7 +1,7 @@
 # Give the assignment name here.
-ASG_NAME=AsgA0006
+ASG_NAME=AsgA0019
 
-# This creates the MainAsgA0011 class name.
+# This creates the MainAsgA0019 class name.
 MAIN_CLASS=Main$(ASG_NAME)
 
 # This create the TestAsgA0011 class name.
