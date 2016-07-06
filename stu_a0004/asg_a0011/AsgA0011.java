@@ -1,4 +1,4 @@
-class Asga0011
+class AsgA0011
 {
 public int sum_of_digits(int num)
 {

@@ -6,7 +6,7 @@ public class TestAsgA0010{
         public void test_01() {
             AsgA0010 obj  = new AsgA0010();
             int temp = obj.reverse_3_digit_int(123);
-            assertEquals(temp, 321);
+            assertEquals(temp,321);
         }
     @Test
         public void test_02() {
