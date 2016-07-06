@@ -12,14 +12,14 @@ public class TestAsgA0011{
         public void test_02() {
             AsgA0011 obj = new AsgA0011();
             int temp = obj.sum_of_digits(1423);
-            assertEquals(temp, 19);
+            assertEquals(temp, 10);
         }
 
     @Test
         public void test_03() {
             AsgA0011 obj = new AsgA0011();
             int temp = obj.sum_of_digits(-25);
-            assertEquals(temp, 5);
+            assertEquals(temp, 7);
         }
     
     @Test
