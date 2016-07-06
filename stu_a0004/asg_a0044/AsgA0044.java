@@ -14,13 +14,13 @@ int x8=x7%10;//1
 int x9=x7/10;//0
 if(x==x8 && x2==x6)
 {
-System.out.println("True");
+System.out.println("true");
 }
 else
 {
 System.out.println("false");
+
 }
 return(0);
 }
 }
-

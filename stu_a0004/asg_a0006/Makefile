@@ -1,5 +1,4 @@
-# Give the assignment name here.
-ASG_NAME=AsgA0006
+SG_NAME=AsgA0006
 
 # This creates the MainAsgA0011 class name.
 MAIN_CLASS=Main$(ASG_NAME)
@@ -44,4 +43,4 @@ clean:
 
 
 javadoc:
-	javadoc *.java -d $(JAVADOC_DIR) $(JAVADOC_FLAGS) 
+javadoc *.java -d $(JAVADOC_DIR) $(JAVADOC_FLAGS) 

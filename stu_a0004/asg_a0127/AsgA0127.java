@@ -1,6 +1,6 @@
 class AsgA0127
 {
-public double  my_floor(double num)
+public int my_floor(double num)
 {
 if(num>0)
 {

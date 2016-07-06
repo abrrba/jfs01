@@ -4,7 +4,7 @@ class AsgA0010{
 		int x;
 		if(num==0)
 		{
-			System.out.println("0");
+			System.out.print(0);
 		}
 		else
 		{
@@ -43,10 +43,10 @@ class AsgA0010{
 							System.out.print(x);
 							num=num/10;	
 						}
-						return(1);
+						
 
 				}
-					return(0);
+					
 				}
 			}
 return(0);

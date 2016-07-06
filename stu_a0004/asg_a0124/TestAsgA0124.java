@@ -12,7 +12,7 @@ public class TestAsgA0124{
         public void test_02() {
             AsgA0124 obj  = new AsgA0124();
             int temp = obj.my_minimum(10,20,-5);
-            assertEquals(temp,20);
+            assertEquals(temp,-5);
         }
  @Test
         public void test_03() {
