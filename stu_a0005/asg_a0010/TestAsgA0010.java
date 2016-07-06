@@ -18,14 +18,14 @@ public class TestAsgA0010{
     @Test
         public void test_03() {
             AsgA0010 obj = new AsgA0010();
-            double temp = obj.rev(4123);
+            int temp = obj.rev(4123);
             assertEquals(temp, 0);
         }
 
   @Test
         public void test_04() {
             AsgA0010 obj = new AsgA0010();
-            double temp = obj.rev(0);
+            int temp = obj.rev(0);
             assertEquals(temp, 0);
         }
 
