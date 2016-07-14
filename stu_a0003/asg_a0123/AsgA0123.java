@@ -4,15 +4,15 @@ public class AsgA0123{
 
 		if(a>b&&a>c)
 		{
-			System.out.println("The Gretest Number is "+a);
+			return(a);
 		}
 		if(b>a&&b>c)
 		{	
-			System.out.println("The Gretest Number is "+b);
+			return(b);
 		}
 		if(c>a&&c>b)
 		{
-			System.out.println("The Gretest Number is "+c);
+			return(c);
 		}
 		return(0);
 	}

@@ -3,7 +3,7 @@ public class MainAsgA0123{
 	{
 
 		AsgA0123 temp = new AsgA0123();
-		temp.my_maximum(10,-20,0);
+		System.out.println(temp.my_maximum(10,-20,0));
 
 	}
 }
