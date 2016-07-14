@@ -1,4 +1,4 @@
-public class AsgAMain0001
+public class MainAsgA0001
 {
 public static void main(String[] arg)
 {

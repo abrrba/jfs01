@@ -5,21 +5,22 @@ public class TestAsgA0001{
     @Test
         public void test_01() {
             AsgA0001 obj  = new AsgA0001();
-            String temp = obj.alter_case_1("HelloWorld");
-            assertEquals(temp, "HeLlOwOrLd");//if we change this output even after test file runs fine 
+            char temp = obj.st("HelloWorld");
+            assertEquals(temp, "HeLlOwOrLd");
         }
     @Test
         public void test_02() {
             AsgA0001 obj = new AsgA0001();
-            String temp = obj.alter_case_1("helloworld");
+            char temp = obj.st("helloworld");
             assertEquals(temp, "HeLlOwOrLd");
         }
 
     @Test
         public void test_03() {
             AsgA0001 obj = new AsgA0001();
-            String temp = obj.alter_case_1("HelloWorld");
+            char temp = obj.st("HELLOWORLD");
             assertEquals(temp, "HeLlOwOrLd");
         }
-
+    
+   
 }

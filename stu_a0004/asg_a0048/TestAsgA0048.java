@@ -7,6 +7,6 @@ public class TestAsgA0048{
         public void test_01() {
             AsgA0048 obj  = new AsgA0048();
             double temp = obj.calculate_longest_diagonal(10,4,5);
-            assertEquals(temp, 11.87,DELTA);
+            assertEquals(temp, 11.87434196472168,DELTA);
         }
 }
