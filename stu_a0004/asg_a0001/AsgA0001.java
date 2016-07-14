@@ -8,15 +8,18 @@ class AsgA0001
 			if(i%2==0)
 			{
 				char s=str.charAt(i);
+				//str1=String.valueOf(s);
 				System.out.print(Character.toUpperCase(s));
 			}
 			else
 			{
 				char t=str.charAt(i);
+				//str1=String.valueOf(t);
 				System.out.print(Character.toLowerCase(t));
-
+				
 			}
+		
 		}
-		return(str);
+	return(str);
 	}
 }
