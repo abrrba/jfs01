@@ -2,15 +2,16 @@ class AsgA0004
 {
 public static String find_lowercase(String str)
 {
+String t="";
 int count=str.length();
-for(int i=1;i<count;i++)
+for(int i=0;i<count;i++)
 {
 char s=str.charAt(i);
 if(Character.isLowerCase(s))
 {
-System.out.print(s);
+t=t+s;
 }
 }
-return(str);
+return(t);
 }
 }
