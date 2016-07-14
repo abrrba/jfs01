@@ -5,27 +5,27 @@ public class TestAsgA0003{
     @Test
         public void test_01() {
             AsgA0003 obj  = new AsgA0003();
-            char temp = obj.alter_case_2("Hello World");
+            String temp = obj.alter_case_2("Hello World");
         	assertEquals(temp, "hELLO wORLD");
         }
-   /* @Test
+    @Test
         public void test_02() {
             AsgA0003 obj = new AsgA0003();
-            char temp = obj.alter_case_2("Dsj");
-            assertEquals(temp, "DsJ");
+            String temp = obj.alter_case_2("Dsj");
+            assertEquals(temp, "dSJ");
         }
 
     @Test
         public void test_03() {
             AsgA0003 obj = new AsgA0003();
-            char temp = obj.alter_case_2("Datta");
-            assertEquals(temp, "DaTtA");
+            String temp = obj.alter_case_2("Datta");
+            assertEquals(temp, "dATTA");
         }
     
     @Test
         public void test_04() {
             AsgA0003 obj = new AsgA0003();
-            char temp = obj.alter_case_2("Anand");
-            assertEquals(temp, "AnAnD");
-        }*/
+            String temp = obj.alter_case_2("Anand");
+            assertEquals(temp, "aNAND");
+        }
 }
