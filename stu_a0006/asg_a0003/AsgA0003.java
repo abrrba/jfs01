@@ -1,23 +1,24 @@
 class AsgA0003
 {
-public static char st(String s1)
+public static String st(String s1)
 {
 int a=s1.length();
+String t="";
 char ser=s1.charAt(0);
-System.out.print(Character.toLowerCase(ser));
+t=t+(Character.toLowerCase(ser));
 for(int i=1;i<a;i++)
 {
 char x=s1.charAt(i);
 if(Character.isUpperCase(x))
 {
-System.out.print(Character.toLowerCase(x));
+t=t+(Character.toLowerCase(x));
 }
 else
 {
 char d=s1.charAt(i);
-System.out.print(Character.toUpperCase(d));
+t=t+(Character.toUpperCase(d));
 }
 }
-return(0);
+return(t);
 }
 }
