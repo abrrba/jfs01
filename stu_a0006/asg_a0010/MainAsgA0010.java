@@ -3,6 +3,6 @@
 public static void main(String[] arg)
 {
 AsgA0010 temp = new AsgA0010();
-System.out.println(temp.re(-13));
+System.out.println(temp.re(34562345));
 }
 }

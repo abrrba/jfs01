@@ -20,37 +20,37 @@ if(a>0)
 int b=z/a;
 if(b>0)
 {
-System.out.println("next");
-break;
+return(999999);
+
 }
 if(b==0)
 {
-System.out.println("GCD is"+a);
-break;
+return(+a);
+
 }
 }
 if(a==0)
 {
-System.out.println("GCD is"+z);
-break;
+return(+z);
+
 }
 }
 if(z==0)
 {
-System.out.println("GDC is"+y);
-break;
+return(+y);
+
 }
 }
 if(y==0)
 {
-System.out.println("GDC is"+x);
-break;
+return(+x);
+
 }
 }
 if(x==0)
 {
-System.out.println("GDC is"+num2);
-break;
+return(+num2);
+
 }
 
 }

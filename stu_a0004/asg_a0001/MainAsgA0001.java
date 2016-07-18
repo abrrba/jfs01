@@ -4,6 +4,6 @@ public class MainAsgA0001
 	{
 		AsgA0001 temp=new AsgA0001();
 		String st=new String("HelloWorld");
-		temp.alter_case_1(st);
+		System.out.println(temp.alter_case_1(st));
 	}
 }

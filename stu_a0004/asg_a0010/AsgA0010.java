@@ -2,6 +2,7 @@ class AsgA0010{
 	public int reverse_3_digit_int(int num)
 	{
 		int x;
+		int t=100;
 		if(num==0)
 		{
 			System.out.print(0);

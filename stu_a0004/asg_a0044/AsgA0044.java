@@ -2,6 +2,8 @@ class AsgA0044
 {
 public int is_palindrome_number(int num)
 {
+boolean t=true;
+boolean f=false;
 int x=num%10;//1
 int x1=num/10;//1232
 int x2=x1%10;//2
@@ -19,7 +21,6 @@ System.out.println("true");
 else
 {
 System.out.println("false");
-
 }
 return(0);
 }
