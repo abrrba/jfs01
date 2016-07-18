@@ -3,6 +3,6 @@ class MainAsgA0004{
 	{
 		AsgA0004 temp = new AsgA0004();
 		String str = "HELlowoRLD";
-		temp.find_lowercase(str);
+		System.out.println(temp.find_lowercase(str));
 	}
 }
