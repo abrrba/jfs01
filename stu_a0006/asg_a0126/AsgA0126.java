@@ -6,7 +6,7 @@ class AsgA0126
                 {
                         if((num%i)==0)
                         {
-                                System.out.println("This is not prime" +num);
+                                return(0);
                                  }
 
                        i=i+1;
@@ -17,7 +17,7 @@ class AsgA0126
                         }
                         else
                         {
-                                System.out.println("This is prime number " +num);
+                                return(1);
 
                         }
                 
