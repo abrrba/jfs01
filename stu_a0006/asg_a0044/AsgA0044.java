@@ -1,6 +1,6 @@
 class AsgA0044
 {
-public int is_palindrome_number(int num)
+public Boolean is_palindrome_number(int num)
 {
 int x=num%10;//1
 int x1=num/10;//1232
@@ -14,12 +14,12 @@ int x8=x7%10;//1
 int x9=x7/10;//0
 if(x==x8 && x2==x6)
 {
-System.out.println("True");
+return(true);
 }
 else
 {
-System.out.println("false");
+return(false);
 }
-return(0);
+
 }
 }

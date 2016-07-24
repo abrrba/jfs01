@@ -3,7 +3,7 @@ class MainAsgA0007{
 	{
 		AsgA0007 temp = new AsgA0007();
 		String str = "heLLoworLd";
-		temp.find_uppercase(str);
+		System.out.println(temp.find_uppercase(str));
 	}
 }
 
