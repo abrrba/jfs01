@@ -1,0 +1,32 @@
+Is it possible to get O(1) time to access linked list
+
+
+LinkedList is connection of a nodes in sequential manner.each noode ic connected to next node.So If we want to access a particular node,Then from first node to that node we are going forword by linkdlist functionality provides.
+
+example:
+
+LinkedList=1->2->3->7->32
+
+In Above Example if We want to access the node 7 then we have to moved from first to seven as follows 
+
+1-2-3-7
+
+This takes O(n) complexity,
+.
+
+So There is need a another approach,The answer of qustion is it is possible to get O(1) time to access Linked List.
+
+------->
+First We Have To Create An Array
+
+Array        [1] [2] [3] [4] [5]
+              !   !   !   !   !
+              !   !   !   !   !
+LinkedList    1   2   3   7   32
+
+
+In array pointing the each and every node of linked list to the array.
+
+And in Array we access any element in O(1) time.
+
+
