@@ -3,15 +3,15 @@ public static int my_minimum(int a,int b,int c)
 {
 if(a<b&&a<c)
 {
-System.out.println("The Minimum number is "+a );
+return(a);
 }
 if(b<a&&b<c)
 {
-System.out.println("The Minimum number is "+b );
+return(b);
 }
 if(c<a&&c<b)
 {
-System.out.println("The Minimum number is "+c );
+return(c);
 }
 return(0);
 }
