@@ -242,31 +242,6 @@ class LinkedList {  // Implement a new class.
 	}
 
 
-	public void sortList(){
-		ListNode temp = head;
-		ListNode temp1 = temp.getNext();
-		while(true){
-			temp = temp.getNext();
-			temp1 = temp1.getNext();
-			int a = temp.getData();
-			int b = temp1.getData();
-			int c;
-			System.out.print("\nThe sorted list: " + temp.getData());
-			if( temp1.getNext() == null){
-			break;
-			}
-			if( a > b ){
-			c = a;
-			a = b;
-			b = c;
-			}
-			//if( temp1 == null){
-			//break;
-			//}
-		}
-		System.out.print("\nThe sorted list is: " + temp.getData() + " " );
-
-	}
 
 
 	public void printAll () {
