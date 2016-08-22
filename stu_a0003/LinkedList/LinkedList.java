@@ -45,8 +45,10 @@ public class LinkedList{
 		middle.setNext(temp1);
 		return 0;
 	}
-	public void delFromHead(){
+	public int delFromHead(){
+		LinkNode temp = head;
 		head = head.getNext();
+		return(temp.getData());
 	}
 	public void delFromTail(){
 		LinkNode temp = head;
@@ -70,22 +72,22 @@ public class LinkedList{
 		LinkNode temp = head;
 		int count = 0;
 		while(temp!=null){
-		if(temp.getData()==data)
-			System.out.println("Node is Available at position :" +count);
+			if(temp.getData()==data)
+				System.out.println("Node is Available at position :" +count);
 			temp = temp.getNext();
 			count++;	
 		}return 0;
 	}
 	public void getElement(){
 		LinkNode temp = head;
-	        int count=0;
+		int count=0;
 		while(temp!=null){
 			temp = temp.getNext();
 			count++;
 		}
 		System.out.println("Elements in the LinkedList is :" + count);
 	}
-/*	public int delValue(int data){
+	/*	public int delValue(int data){
 		LinkNode temp = head;
 		int count = 0;
 	//	while(temp.getNext() != null){
@@ -95,19 +97,20 @@ public class LinkedList{
 	//			break;					
 	//	}
 	//	temp = head;
-		for(int i=0;i<6 ;i++){
-			temp = temp.getNext();
-			count++;
-			if(temp.getData()==data)
-			break;		
-		}LinkNode temp1 = temp.getNext();
-		 LinkNode temp2 = temp1.getNext();
-		 temp.setNext(temp2);
-		return 0;
+	for(int i=0;i<6 ;i++){
+	temp = temp.getNext();
+	count++;
+	if(temp.getData()==data)
+	break;		
+	}LinkNode temp1 = temp.getNext();
+	LinkNode temp2 = temp1.getNext();
+	temp.setNext(temp2);
+	return 0;
 	}*/
 	public void printAll(){
-		if(head==null)
+		if(head==null){
 			System.out.println("Linked List is not prasent...! ");
+		}
 		else{
 			LinkNode temp = head;
 			while(true){
@@ -120,5 +123,34 @@ public class LinkedList{
 
 		}
 	}
-
+	public int addAtSorted(int node){
+		LinkedList y = new LinkedList();
+		LinkNode temp = new LinkNode(node);
+//		if(head==null){
+		temp.setNext(null);	
+	//		LinkNode head = temp;
+	//		head.setNext(null);
+//			return 0;	
+//		}
+	/*	else{
+			LinkNode sort = new LinkNode(head.getData());
+			//LinkNode gret = head.getNext();
+			if(head.getData()<node){
+				if(head.getNext()==null){
+					y.addAtTail(node);
+				}
+				LinkNode gret = head.getNext();
+				while(node>gret.getData()){
+					gret = gret.getNext();
+					sort = sort.getNext();
+				}
+				sort.setNext(temp);
+				temp.setNext(gret);
+			}
+			else if(head.getData()>=temp.getData()){
+				y.addAtHead(node);
+			}
+		}		*/				
+		return 0;
+	}
 }
