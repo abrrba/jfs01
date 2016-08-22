@@ -1,5 +1,6 @@
 class LinkedList
 {
+
 	ListNode head;
 
 	LinkedList()
@@ -21,25 +22,46 @@ class LinkedList
 			head=temp;
 		}
 	}
-	public void addAtMiddle(int m,int node )
+	public void addAtMiddle(int num,int size)
 	{
-		ListNode n=new ListNode(m);;
+		ListNode node=new ListNode(num);;
 		ListNode temp=head;
-		ListNode temp1=head.getNext();
-		if(node==1)
+	//	ListNode temp1=head.getNext();
+		if(head==null )
 		{
-			temp.setNext(n);
-			n.setNext(temp1);
+		
+			head=new ListNode(num);
+			head.setNext(null);
 		}
-		else//node=2
+
+		else if(temp.getNext()==null)
 		{
-			for(int i=0;i<node-1&&temp.getNext()!=null;i++)
+			temp.setNext(node);
+			node.setNext(null);
+		}
+		else
+		{
+			ListNode temp1=head.getNext();
+			int x=size;
+			int y=x/2;	
+			for(int i=0;i<y&&temp.getNext()!=null;i++)
 			{
-				temp=temp.getNext();
-				temp1=temp1.getNext();
+				if(temp1.getNext()==null)
+				{
+					break;
+				}
+				else if(y==1)
+				{
+				break;
+				}
+				else
+				{
+					temp=temp.getNext();
+					temp1=temp1.getNext();
+				}
 			}
-			temp.setNext(n);
-			n.setNext(temp1);
+			temp.setNext(node);
+			node.setNext(temp1);
 		}
 	}
 
@@ -109,25 +131,25 @@ class LinkedList
 			}
 			else
 			{
-				while(temp.getData()>point1.getData()&& point2.getNext()!=null)
+		while(temp.getData()>=point1.getData()&& point2.getNext()!=null)
 				{
-					if(temp.getData()>point1.getData() && temp.getData()>point2.getData())
+	if(temp.getData()>=point1.getData() && temp.getData()>=point2.getData())
 					{
 						point1=point1.getNext();
 						point2=point2.getNext();
 					}
-					else if(temp.getData()>point1.getData() && temp.getData()<point2.getData())
+ else if(temp.getData()>=point1.getData() && temp.getData()<=point2.getData())
 					{
 						break;
 					}
 				}
 
-				if(point2.getNext()==null && temp.getData()>point2.getData())
+				if(point2.getNext()==null && temp.getData()>=point2.getData())
 				{
 					point2.setNext(temp);
 					temp.setNext(null);
 				}
-				else if(temp.getData()>point1.getData() && temp.getData()<point2.getData())
+				else if(temp.getData()>=point1.getData() && temp.getData()<=point2.getData())
 				{
 					point1.setNext(temp);
 					temp.setNext(point2);
