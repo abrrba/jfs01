@@ -34,7 +34,7 @@ public class LinkedList{
 			return 0;
 		}
 	}
-	public int addAtMiddle(int data,int node){
+	public int addAfter(int data,int node){
 		LinkNode middle = new LinkNode(data);
 		LinkNode temp = head;	
 		for(int i=1;i<node;i++){
@@ -45,10 +45,30 @@ public class LinkedList{
 		middle.setNext(temp1);
 		return 0;
 	}
+	public int addAtMiddle(int data){
+		LinkedList m = new LinkedList();
+		LinkNode node = new LinkNode(data);
+		if(head==null){
+			node.setNext(null);
+			head=node;//1
+		}else if(head.getNext()==null){
+			head.setNext(node);
+			node.setNext(null);
+		}else{LinkNode temp = head;
+			int count = 0;
+			while(temp.getNext()!=null){
+			count = count +1;
+			}
+			int middle = count/2;
+			m.addAfter(data,middle);
+		
+		}return 0;
+
+	}
 	public int delFromHead(){
-		LinkNode temp = head;
+		int temp = head.getData();
 		head = head.getNext();
-		return(temp.getData());
+		return(temp);
 	}
 	public void delFromTail(){
 		LinkNode temp = head;
@@ -127,35 +147,39 @@ public class LinkedList{
 		LinkNode node = new LinkNode(data);
 		if(head==null){
 			node.setNext(null);
-			head = node;//50
-		}else if(node.getData()/*42*/<=head.getData()){
+			head = node;//12
+		}else if(node.getData()/*9*/<=head.getData()){
 			node.setNext(head);
-			head = node;//20 30 31 42 50
+			head = node;//9 12
 		}
 		else{	
 			LinkNode sort = head;
-			if(node.getData/*35*/()>head.getData()/*20*/){
+			if(node.getData/*98*/()>head.getData()/*9*/){
 				if(head.getNext()==null){
-					sort.setNext(node);
+					sort.setNext(node);/*9 12 98*/
 					node.setNext(null);
 				}
 				else{
-					LinkNode temp/*30*/ = head.getNext();
-					LinkNode temp1/*31*/ = temp.getNext();
-					if(temp.getData()/*30*/<node.getData()/*35*/){
-						while(temp1.getData()<node.getData()){
+					LinkNode temp/*12*/ = head.getNext();
+					LinkNode temp1/*null*/ = temp.getNext();
+					if(temp.getData()/*12*/<=node.getData()/*98*/){
+						if(temp.getNext()==null){
+							temp.setNext(node);
+							node.setNext(null);
+						}else{
+						while(temp1.getData()<=node.getData()){
 							temp/*31*/ = temp.getNext();
 							temp1 = temp1.getNext();
 							if(temp1==null){break;}
 						}
-						
+						}
 						temp.setNext(node);//20 30 31 35
 						node.setNext(temp1);//20 30 31 42 35 50
 					}else if(temp.getData()>=node.getData()){
-						while(temp.getData()>=node.getData()){
-							temp = temp.getNext();
-							sort = sort.getNext();
-						}
+					//	while(temp.getData()>=node.getData()){
+					//		temp = temp.getNext();
+					//		sort = sort.getNext();
+					//	}
 						sort.setNext(node);
 						node.setNext(temp);
 					}
