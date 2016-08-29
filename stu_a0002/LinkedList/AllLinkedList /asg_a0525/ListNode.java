@@ -1,17 +1,16 @@
 class ListNode
 {
-private int data;
 private ListNode next;
+private int data;
 
-ListNode(int d)
-{
-data=d;
+ListNode(int val){
+data=val;
 next=null;
 }
 
-public void setData(int d)
+public void setData(int val)
 {
-data=d;
+data=val;
 }
 
 public int getData()
@@ -29,4 +28,3 @@ public ListNode getNext()
 return next;
 }
 }
-

@@ -16,13 +16,17 @@ public class MainLinkedList{
 //			y.addAtHead(x.delFromHead());
 //		}
 //		y.printAll();
-
+//		LinkNode y = new LinkNode();
 		x.addAtSorted(50);
 		x.addAtSorted(42);
 		x.addAtSorted(31);
 		x.addAtSorted(30);
 		x.addAtSorted(20);
 		x.addAtSorted(35);
+		x.addAtSorted(10);
+		x.addAtSorted(55);
+
 		x.printAll();
+	//	System.out.println(y.getData());
 	}
 }
