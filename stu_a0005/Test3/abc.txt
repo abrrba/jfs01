@@ -1,0 +1,3 @@
+Sorted-Ascending order: [05] 5523 43 777 89 999 
+Sorted-Decending order: [08] 33 99 64 78 34 88 99 56 45 665
+Add-at-middle: [10] 1 2 3 4 5 6 7 8 9 10
