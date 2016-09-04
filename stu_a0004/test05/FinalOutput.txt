@@ -1,0 +1,13 @@
+The Post Order Is
+11
+12
+17
+15
+10
+19
+18
+26
+23
+20
+The Lowest Common Ancestor is
+15
