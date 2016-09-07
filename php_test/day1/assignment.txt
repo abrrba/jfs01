@@ -1,0 +1,29 @@
+Write code to read a file with 
+
+Name|Age|Marks|Roll
+
+and then encode it to json.
+
+Then make a table in mysql and fetch data from there.
+
+See the code<?php                                                                           
+                                                                                
+// create connection                                                            
+try {                                                                           
+        $pdo = new PDO('mysql:host=localhost;dbname=myzone', 'root', 'root123');
+                                                                                
+        $statement = $pdo->query("SELECT * FROM categories");                   
+        $row = $statement->fetchALL(PDO::FETCH_ASSOC);                          
+                                                                                
+        echo json_encode($row);                                                 
+                                                                                
+    } catch(PDOException $e) {                                                  
+                                                                                
+            echo $e->getMessage();                                              
+                                                                                
+    }                                                                           
+                                                                                
+?>                     
+
+
+For inserting the data to the mysql table - use java.

@@ -1,0 +1,10 @@
+rishi1|23|32|maths
+rishi2|33|33|maths
+rishi3|13|34|maths
+rishi4|43|35|maths
+rishi5|53|36|maths
+rishi6|63|37|maths
+rishi7|73|38|maths
+rishi8|83|39|maths
+rishi9|93|30|maths
+
