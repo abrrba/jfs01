@@ -1,0 +1,118 @@
+############
+Let Us Start
+############
+
+Let us start section wise and complete each of the requirements
+
+First we change the background of the page to ``#ff3377``, as below :
+
+.. code-block:: html
+
+   <body style="background-color:#ff3377">
+
+
+Next we create the ``<div>`` for ``Item`` heading and the table for the products to
+display. Below is the code snippet:
+
+.. literalinclude:: product.html
+   :language: html
+   :lines: 21-24
+
+The id ``item_tab`` here is again used to populate the product table using
+Javascript and PHP as we did before in Main Page.
+
+To call the function to make the product table is located inside a ``<script>`` which is loaded on page load as below :
+
+.. literalinclude:: product.html
+   :language: html
+   :lines: 9-17
+
+Here, instead of calling the function ``make_product_table()`` directly, we have done some processing which is explained below:
+
+#. Remember, we passed a value as ``?q=name`` in the previous page. Well we need to use it here.
+
+#. We will extract the ``name`` part from the URL and pass it to the function ``make_product_table()``.
+
+#. So how do we do that....????????
+
+#. The command ``window.location.href;`` fetches the window's URL, and we have stored it in a variable ``url``.
+
+#. Using the ``split()`` function, we split the URL with ``=`` as a seperator.
+
+.. note::
+
+   You can see the URL and you will know why we have used "=" as the seperator
+
+The ``split()`` function returns an array.
+
+#. To point to the ``name`` part, we use ``spliturl[1]`` as the index. It gives us the category name, which has been clicked on the previous page. We then pass this name to our Javascript function.
+
+Javascript
+==========
+
+Now we will look at the ``make_product_table()`` function. Below is the code
+snippet for the same :
+
+.. literalinclude:: js/item.js
+   :language: javascript
+   :lines: 1-32
+
+
+#. If you see the 2nd line of this code, we have first built the ``php_page`` variable. Can anyone tell, why it has been done so -
+
+#. Well, as we passed a value from Main Page to Product Page via the URL, to use it in the Product Page Javascript, we are passing the same value to the PHP page, so that it can use it and fire a query based on that. Now how we will use this variable in php, we will see that when we discuss the PHP section. As of now we will proceed with the Javascript functionality.
+
+#. So the PHP page ``get_item.php?search=category`` is called and the items listed under that category are returned in JSON format to Javascript variable `result`.
+
+#. Now let us have a closer look over the ``row`` variable, as how it is being built.
+
+#. We have first added an image under an ``<a>`` tag so that it is linked to the ``#description`` popup which we will be coding in some time.
+
+#. The ``src`` of image is taken from the database table datail.
+
+#. Also, there is a ``onclick()`` function called for the image. This in-built event, allows to call a javascript function from HTML input. Here we have call ``make_item_decsription('category,name,seller,year,desc,quantity')`` for the popup.
+
+#. Next a ``<div>`` is built to display the Name and Price of the product which is also fetched from the database table.
+
+#. Then, we create a ``Buy`` button, which will redirect the user to the Payment Page.
+
+.. note::
+
+   Here also, we have passed the values "name", "price" and "quantity" to be displayed on the payment page
+
+
+#. And in the end the ``innerHTML`` is built.
+
+
+#. Next there is ``make_item_decsription()`` function which builds the popup
+window for the description details of the product.
+
+.. literalinclude:: js/item.js
+   :language: javascript
+   :lines: 35-49
+
+The corresponding CSS are written in the CSS file that you already have with
+you.
+
+PHP
+===
+
+Now we will walkthrough the ``get_item.php`` code.
+
+.. literalinclude:: get_item.php
+   :language: php
+   :lines: 1-22
+
+#.  Here first we extract the ``category`` value which was passed from the Javascript while calling the PHP page.
+
+#.  Then we create a variable ``query_cat`` to use it while writing the fetch query. Here we have appended quotes with the category name.
+
+#.  Also we create a variable ``query_search`` for the search string that was
+    entered in the search bar of the Main Page.
+
+#.  Then as before, we first create a connection with the DB, and then execute the Query to extract all the items in the ``product_detail`` table, where the
+    category is specified as the one which user has clicked or entered in the search bar.
+
+#.  The result array of items is send back to Javascript in JSON format.
+
+#.  The user is then redirected to the Payment Page.

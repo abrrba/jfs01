@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4.1. Basic CSS &#8212; Webonomics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Webonomics 1.0 documentation" href="../index.html" />
+    <link rel="up" title="4. Basic CSS" href="00_index.html" />
+    <link rel="next" title="4.2. External CSS" href="02_external_css.html" />
+    <link rel="prev" title="4. Basic CSS" href="00_index.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Webonomics 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>4.1. Basic CSS</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="00_index.html">4. Basic CSS</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="02_external_css.html">4.2. External CSS</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="basic-css">
+<h1>4.1. Basic CSS<a class="headerlink" href="#basic-css" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>This is an introduction to some basic CSS concepts which changes the look and
+feel of the page for the user.</li>
+<li>CSS stands for <code class="docutils literal"><span class="pre">Cascading</span> <span class="pre">Style</span> <span class="pre">Sheet</span></code>.</li>
+<li>It describes how HTML Elements are to be displayed on the screen.</li>
+<li>External Style Sheets are stored in CSS files.</li>
+</ol>
+<div class="section" id="css-selectors">
+<h2>4.1.1. CSS Selectors<a class="headerlink" href="#css-selectors" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="element-selector">
+<h2>4.1.2. Element Selector<a class="headerlink" href="#element-selector" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>It selects the element based on element name.</li>
+</ol>
+<div class="section" id="syntax">
+<h3>4.1.2.1. Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span></span>p {
+    color: red
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="id-selector">
+<h2>4.1.3. ID Selector<a class="headerlink" href="#id-selector" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>It selects the element based on its ID. To select the specific id, use a hash
+<strong>#</strong> character followed by the id of the element.</li>
+</ol>
+<div class="section" id="id1">
+<h3>4.1.3.1. Syntax<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span></span>#id1 {
+     color:red;
+}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="class-selector">
+<h2>4.1.4. Class Selector<a class="headerlink" href="#class-selector" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>It selects the element based on the class specified.</li>
+<li>To select a class, use a dot <strong>.</strong> character followed by the name of the class.</li>
+</ol>
+<div class="section" id="id2">
+<h3>4.1.4.1. Syntax<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-html"><div class="highlight"><pre><span></span>.class1 {
+     color:red;
+ }
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>You can also specify that only certain HTML element with that class should be
+affected and not all the elements of that class as below :</li>
+</ol>
+<div class="highlight-html"><div class="highlight"><pre><span></span>p.class1 {
+     color:red;
+}
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>This will only change the text color of &lt;p&gt; element with class <code class="docutils literal"><span class="pre">class1</span></code> and
+leave rest of the elements unchanged who have class as <cite>class1</cite>.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="grouping-selectors">
+<h2>4.1.5. Grouping Selectors<a class="headerlink" href="#grouping-selectors" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>You can group the elements having same styles in a single group by using a comma
+<strong>,</strong> operator as below :</li>
+</ol>
+<div class="highlight-html"><div class="highlight"><pre><span></span>p, h1, h2 {
+     color:red;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="css-comments">
+<h2>4.1.6. CSS Comments<a class="headerlink" href="#css-comments" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>To mark comments in CSS we use <code class="docutils literal"><span class="pre">/*</span> <span class="pre">Comment</span> <span class="pre">*/</span></code> pattern</li>
+</ol>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="00_index.html">4. Basic CSS</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="02_external_css.html">4.2. External CSS</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Garima Agarwal, Rishi Agrawal.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

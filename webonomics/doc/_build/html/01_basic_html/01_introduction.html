@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3.1. Introduction &#8212; Webonomics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Webonomics 1.0 documentation" href="../index.html" />
+    <link rel="up" title="3. Basic HTML" href="00_index.html" />
+    <link rel="next" title="3.2. Styling the Page" href="02_styling.html" />
+    <link rel="prev" title="3. Basic HTML" href="00_index.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Webonomics 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>3.1. Introduction</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="00_index.html">3. Basic HTML</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="02_styling.html">3.2. Styling the Page</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="introduction">
+<h1>3.1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>This is an introduction to some basic HTML tags which will help to start.</p>
+<p>We will write <code class="docutils literal"><span class="pre">Hello</span> <span class="pre">World</span></code> in this section.</p>
+<div class="section" id="doctype-declaration">
+<h2>3.1.1. DOCTYPE Declaration<a class="headerlink" href="#doctype-declaration" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>The <code class="docutils literal"><span class="pre">&lt;!DOCTYPE&gt;</span></code> declaration must be the first thing in any HTML document.</li>
+<li>Do not confuse it it as a HTML tag.</li>
+<li>It is an instruction to the web browser about what version of HTML the page is written.</li>
+<li>This declaration is not case senstive</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;!DOCTYPE</span> <span class="pre">html&gt;</span></code></p>
+</div>
+<div class="section" id="charset-declaration">
+<h2>3.1.2. Charset Declaration<a class="headerlink" href="#charset-declaration" title="Permalink to this headline">¶</a></h2>
+<p>To display an HTML page correctly, a web browser must know the character set
+used in the page. UTF-8(Unicode) covers almost all of the characters and symbols
+in the world. <code class="docutils literal"><span class="pre">&lt;meta&gt;</span></code> tag is used for this.</p>
+<p><code class="docutils literal"><span class="pre">&lt;meta</span> <span class="pre">charset=&quot;UTF-8&quot;&gt;</span></code></p>
+</div>
+<div class="section" id="elements-and-attributes">
+<h2>3.1.3. Elements and Attributes<a class="headerlink" href="#elements-and-attributes" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">Elements</span></code> are written within a start tag, and an end tag, with the content in between.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;tagname&gt;</span> <span class="pre">content</span> <span class="pre">&lt;/tagname&gt;</span></code></p>
+<ol class="arabic simple">
+<li>Some elements do not have an end tag, like <code class="docutils literal"><span class="pre">&lt;br&gt;</span></code>, <code class="docutils literal"><span class="pre">&lt;hr&gt;</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">Attributes</span></code> provide <strong>additional information</strong> about an element.</li>
+<li>This is always specified in the <strong>start tag</strong>.</li>
+<li>Attributes come in <code class="docutils literal"><span class="pre">name/value</span></code> pairs like : <code class="docutils literal"><span class="pre">name=&quot;value&quot;</span></code></li>
+</ol>
+</div>
+<div class="section" id="html-tag">
+<h2>3.1.4. HTML Tag<a class="headerlink" href="#html-tag" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>The`` &lt;html&gt;`` tag tells the browser that this is an HTML document.</li>
+<li>It is the container of all other HTML elements.</li>
+<li>To end the <code class="docutils literal"><span class="pre">&lt;html&gt;</span> <span class="pre">tag</span> <span class="pre">we</span> <span class="pre">put</span> <span class="pre">a</span> <span class="pre">**&quot;\&quot;**</span> <span class="pre">before</span> <span class="pre">the</span> <span class="pre">tag</span> <span class="pre">:</span> <span class="pre">``&lt;/html&gt;</span></code></li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;html&gt;</span> <span class="pre">.....</span> <span class="pre">&lt;/html&gt;</span></code></p>
+</div>
+<div class="section" id="head-tag">
+<h2>3.1.5. HEAD Tag<a class="headerlink" href="#head-tag" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>The <code class="docutils literal"><span class="pre">&lt;head&gt;</span></code> element is a container for all the head elements.</li>
+<li>It can include a title for the document, scripts, styles, meta information, links and more.</li>
+<li>It is optional in case of HTML5 (if there are no scripts or styles or links).</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;head&gt;</span> <span class="pre">.....</span> <span class="pre">&lt;/head&gt;</span></code></p>
+</div>
+<div class="section" id="title-tag">
+<h2>3.1.6. TITLE Tag<a class="headerlink" href="#title-tag" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Every web page has a title which is shown in the window tab of browser.</li>
+<li><code class="docutils literal"><span class="pre">&lt;title&gt;</span></code> tag is used to define the same.</li>
+<li>As mentioned above, it is enclosed within the <code class="docutils literal"><span class="pre">&lt;html&gt;</span></code> tag.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;title&gt;</span> <span class="pre">First</span> <span class="pre">Page</span> <span class="pre">&lt;/title&gt;</span></code></p>
+</div>
+<div class="section" id="body-tag">
+<h2>3.1.7. BODY Tag<a class="headerlink" href="#body-tag" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>The <code class="docutils literal"><span class="pre">&lt;body&gt;</span></code> tag defines the documents body.</li>
+<li>It contains all the text, images and data which needs to be displayed on the webpage.</li>
+<li>It also needs a closing tab to end the body section of the webpage.</li>
+<li>This tag is outside the <code class="docutils literal"><span class="pre">&lt;head&gt;</span></code> tag but inside <code class="docutils literal"><span class="pre">&lt;html&gt;</span></code> tag.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;body&gt;</span> <span class="pre">.........</span> <span class="pre">&lt;/body&gt;</span></code></p>
+</div>
+<div class="section" id="adding-comments">
+<h2>3.1.8. Adding comments<a class="headerlink" href="#adding-comments" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>It is very necessary to add comments in your code to imporove the readibility.</li>
+<li>Having comments in the code, make it easy to traverse through and understand the spicific on any code piece within.</li>
+<li>In HTML we add comments using <code class="docutils literal"><span class="pre">&lt;!--</span> <span class="pre">Your</span> <span class="pre">Comments</span> <span class="pre">--&gt;</span></code></li>
+</ol>
+</div>
+<div class="section" id="example-1">
+<h2>3.1.9. Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>This is the code to have a page with <strong>Hello World</strong></li>
+</ol>
+<div class="highlight-html"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="highlight"><pre><span></span>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt; First Example &lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;!--Text need to be displyed goes inside the &lt;body&gt; --&gt;
+        Hello World
+
+&lt;footer&gt;
+        &lt;p&gt;&amp;copy www.crestrou.com&lt;/p&gt;
+&lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple">
+<li>Example Link <a class="reference external" href="http://localhost/webonomics/doc/01_basic_html/examples/example01.html">example01</a></li>
+</ol>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="00_index.html">3. Basic HTML</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="02_styling.html">3.2. Styling the Page</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Garima Agarwal, Rishi Agrawal.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

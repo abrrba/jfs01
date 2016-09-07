@@ -1,0 +1,31 @@
+[{
+	"name": "Watch-001",
+	"price": 1000,
+	"manufacturer": "Sonata",
+	"description": "Best watch in the market",
+	"quantity": 10
+}, {
+        "name": "Watch-002",
+	"price": 1100,
+	"manufacturer": "Sonata",
+	"description": "Best watch in the market",
+	"quantity": 11
+}, {
+        "name": "Watch-003",
+	"price": 1300,
+	"manufacturer": "Mandola",
+	"description": "Best watch in the market",
+	"quantity": 21
+}, {
+        "name": "Watch-004",
+	"price": 1300,
+	"manufacturer": "Mandola",
+	"description": "Best watch in the market",
+	"quantity": 21
+}, {
+        "name": "Watch-005",
+	"price": 2000,
+	"manufacturer": "Tommy",
+	"description": "Best watch in the market",
+	"quantity": 15
+}]

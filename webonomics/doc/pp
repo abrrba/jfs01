@@ -1,0 +1,4 @@
+#! /bin/bash
+
+make latexpdf
+evince "$MANUAL_DIR""_build/latex/Pinnacle.pdf"

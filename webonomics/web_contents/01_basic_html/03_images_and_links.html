@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2.3. Images and Links &mdash; Webonomics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Webonomics 1.0 documentation" href="../index.html" />
+    <link rel="up" title="2. Basic HTML" href="00_index.html" />
+    <link rel="next" title="2.4. Tables and Lists" href="04_tables_and_lists.html" />
+    <link rel="prev" title="2.2. Styling the Page" href="02_styling.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Webonomics 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>2.3. Images and Links</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="02_styling.html">2.2. Styling the Page</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="04_tables_and_lists.html">2.4. Tables and Lists</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="images-and-links">
+<h1>2.3. Images and Links<a class="headerlink" href="#images-and-links" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li>We can add Images and Links in our web page to improve the look and feel of the WebPage.</li>
+</ol>
+<div class="section" id="images">
+<h2>2.3.1. Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>The &lt;img&gt; tag is empty, it contains attributes only, and does not have a closing tag.</li>
+<li>The src attribute specifies the URL of the image.</li>
+<li>The syntax is :</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;img</span> <span class="pre">src=&quot;url&quot;</span> <span class="pre">alt=&quot;text&quot;&gt;</span></code></p>
+<ol class="arabic simple">
+<li><strong>alt</strong> attribute specifies the alternate text which will be displayed if the
+image is not displayed due to some error.</li>
+</ol>
+<div class="section" id="width-and-height">
+<h3>2.3.1.1. Width and Height<a class="headerlink" href="#width-and-height" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>It specifies the width and height of the image. It is specified with the number of pixels.</li>
+</ol>
+</div>
+<div class="section" id="title">
+<h3>2.3.1.2. Title<a class="headerlink" href="#title" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>This attribute helps to display a text when the mouse pointer is hovered over the image.</li>
+</ol>
+</div>
+</div>
+<div class="section" id="links">
+<h2>2.3.2. Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>HTML links are hyperlinks. A hyperlink is a text or an image you can click to jump to another location outside of curremt page.</li>
+<li>The syntax is</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;a</span> <span class="pre">href=&quot;url&quot;&gt;</span> <span class="pre">Link</span> <span class="pre">Text/Image</span> <span class="pre">&lt;/a&gt;</span></code></p>
+<ol class="arabic simple">
+<li>You can change the colors of links based on their current status, i.e. Unvisited, Visited, Hover, Active.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">a:link|visited|hover|active</span></code></p>
+<div class="section" id="target-attribute">
+<h3>2.3.2.1. Target Attribute<a class="headerlink" href="#target-attribute" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>It specifies where to open the linked document.</li>
+<li>Syntax is :</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">&lt;a</span> <span class="pre">href&quot;url&quot;</span> <span class="pre">target=&quot;_blank&quot;&gt;</span> <span class="pre">text</span> <span class="pre">&lt;/a&gt;</span></code></p>
+<p><code class="docutils literal"><span class="pre">target=&quot;_blank|_self|_parent|_top</span></code></p>
+</div>
+</div>
+<div class="section" id="internal-links-bookmarks">
+<h2>2.3.3. Internal Links - Bookmarks<a class="headerlink" href="#internal-links-bookmarks" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>In HTML we can create bookmarks, which are also know as internal links, which
+are used to traverse to different location within the same page.</li>
+<li>For this, first we need to create an ID at the target element, and call that
+target using a <strong>#</strong> from the link.</li>
+<li>Below example handles all the above scenarios.</li>
+</ol>
+<div class="highlight-html"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre></div></td><td class="code"><div class="highlight"><pre>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Example For CSS &lt;/title&gt;
+&lt;style&gt;
+        h1 {
+                text-align:center;
+        }
+
+        a:link {
+              color:green; 
+        }
+        a:visited {
+                color:blue;
+        }
+        a:hover {
+                color:orange;
+                text-decoration:none;
+        }
+        a:active {
+                color:magenta;
+        }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body style=&quot;background-color:cyan&quot;&gt;
+        &lt;h1 id=&quot;top&quot;&gt;Hello World&lt;/h1&gt;
+        &lt;h1 style=&quot;color:blue&quot;&gt;How&lt;/h1&gt;
+        &lt;h1&gt;Are&lt;/h1&gt;
+        &lt;h1&gt;You&lt;/h1&gt;
+
+        This line1 is without `p` tag.&lt;br&gt;
+        This line2 is without `p` tag.
+        &lt;hr&gt;
+        &lt;p&gt; This line1 is within the tag.&lt;/p&gt; &lt;br&gt; &lt;p&gt;This is also within the tag.&lt;/p&gt;
+
+
+        &lt;hr style=width:560px;height:30px;color:red;background-color:red&gt;
+        &lt;hr size=&quot;30&quot;&gt;
+
+        &lt;!--To add the image --&gt;
+        &lt;img src=&quot;../images/1.png&quot; alt=&quot;1.png&quot; title=&quot;sun&quot;&gt;
+        &lt;img src=&quot;/home/garima/Desktop/scrap/3.png&quot; alt=&quot;3.png&quot; title=&quot;sun&quot;&gt;
+        &lt;img src=&quot;../images/1.png&quot; alt=&quot;1.png&quot; title=&quot;sun&quot; style=&quot;width:100px;height=100px;&quot;&gt;
+
+        &lt;br&gt;
+        &lt;!-- To add the internal link --&gt;
+        &lt;a href=&quot;#top&quot;&gt; Top &lt;/a&gt;
+
+        &lt;br&gt;
+        &lt;!-- To add external link --&gt;
+        &lt;a href=&quot;https://www.google.co.in&quot;&gt; Google.com &lt;/a&gt;
+&lt;footer&gt;
+        &lt;p&gt;&amp;copy www.Crestrou.com&lt;/p&gt;
+&lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></div>
+</td></tr></table></div>
+<ol class="arabic simple">
+<li>Example Link <a class="reference external" href="http://localhost/webonomics/doc/01_basic_html/examples/example07.html">example07</a></li>
+</ol>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="02_styling.html">2.2. Styling the Page</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="04_tables_and_lists.html">2.4. Tables and Lists</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garima Agarwal, Rishi Agrawal.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

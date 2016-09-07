@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>3. Basic HTML &#8212; Webonomics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Webonomics 1.0 documentation" href="../index.html" />
+    <link rel="next" title="3.1. Introduction" href="01_introduction.html" />
+    <link rel="prev" title="2.1. Required Packages" href="../031_system_setup/01_introduction.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Webonomics 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>3. Basic HTML</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../031_system_setup/01_introduction.html">2.1. Required Packages</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="01_introduction.html">3.1. Introduction</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="basic-html">
+<h1>3. Basic HTML<a class="headerlink" href="#basic-html" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">3.1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#doctype-declaration">3.1.1. DOCTYPE Declaration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#charset-declaration">3.1.2. Charset Declaration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#elements-and-attributes">3.1.3. Elements and Attributes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#html-tag">3.1.4. HTML Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#head-tag">3.1.5. HEAD Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#title-tag">3.1.6. TITLE Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#body-tag">3.1.7. BODY Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#adding-comments">3.1.8. Adding comments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#example-1">3.1.9. Example 1</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_styling.html">3.2. Styling</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#style-attribute">3.2.1. Style attribute</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#headings">3.2.2. Headings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#alignment-of-text">3.2.3. Alignment of Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_styling.html#usage-1">3.2.3.1. Usage 1</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_styling.html#usage-2">3.2.3.2. Usage 2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#p-tag">3.2.4. &lt;p&gt; Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#br-tag">3.2.5. &lt;br&gt; Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#hr-tag">3.2.6. &lt;hr&gt; Tag</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#see-the-color-palette-in-the-file-colorpalette-png">3.2.7. See the Color Palette in the file ColorPalette.png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#body-background">3.2.8. Body Background</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#text-color">3.2.9. Text Color</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_styling.html#font">3.2.10. Font</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_images_and_links.html">3.3. Images and Links</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_images_and_links.html#images">3.3.1. Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_images_and_links.html#width-and-height">3.3.1.1. Width and Height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_images_and_links.html#title">3.3.1.2. Title</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_images_and_links.html#links">3.3.2. Links</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_images_and_links.html#target-attribute">3.3.2.1. Target Attribute</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_images_and_links.html#internal-links-bookmarks">3.3.3. Internal Links - Bookmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_tables_and_lists.html">3.4. Tables and Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_tables_and_lists.html#tables">3.4.1. Tables</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_tables_and_lists.html#syntax">3.4.1.1. Syntax</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_tables_and_lists.html#lists">3.4.2. Lists</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_tables_and_lists.html#id1">3.4.2.1. Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_tables_and_lists.html#id2">3.4.2.2. Syntax</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_tables_and_lists.html#id3">3.4.2.3. Syntax</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05_text_formatting.html">3.5. Text Formatting Elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_text_formatting.html#marquee">3.5.1. Marquee</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_text_formatting.html#bold">3.5.2. Bold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_text_formatting.html#italics">3.5.3. Italics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_text_formatting.html#emphasize">3.5.4. Emphasize</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_text_formatting.html#marked">3.5.5. Marked</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_text_formatting.html#deleted-and-inserted">3.5.6. Deleted and Inserted</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_text_formatting.html#subscript-and-superscript">3.5.7. Subscript and Superscript</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="../031_system_setup/01_introduction.html">2.1. Required Packages</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="01_introduction.html">3.1. Introduction</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Garima Agarwal, Rishi Agrawal.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

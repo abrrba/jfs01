@@ -1,0 +1,87 @@
+	.section-heading {
+		text-align:center;
+		font-size:40px;
+		font-family: 'Della-Respira';
+		text-decoration: underline;
+	}
+/* 
+ CSS for popups
+ */
+        #overlayx {
+                display:none;
+                position:fixed;
+                left:0px;
+                top:0px;
+                width:100%;
+                height:100%;
+                background:#000;
+                opacity:0.5;
+                z-index:99999;
+        }
+        #popupx {
+                display:none;
+                position:fixed;
+                left:50%;
+                top:50%;
+                width:300px;
+                height:300px;
+                background:#FFFFFF;
+                border:2px solid #000;
+                z-index:100000
+        }
+        .overlay {
+                display:none;
+                position:fixed;
+                top:0px;
+                width:100%;
+                height:100%;
+                bottom:0;
+                left:0;
+                right:0;
+                background: rgba(0,0,0,0.7);
+                transition: opacity 500ms;
+                visibility: hidden;
+                opacity: 0.5;
+                z-index:99999;
+        }
+        .overlay:target {
+                visibility: visible;
+                opacity:1;
+        }
+
+        .popup {
+                margin: 70px auto;
+                padding: 20px;
+                top:20px;
+                left:450px;
+                background: #fff;
+                border-radius: 5px;
+                width: 30%;
+                position: fixed;
+                transition: all .5s ease-in-out;
+                visibility: visible;
+                
+        }
+        .popup h2 {
+                margin-top: 0;
+                color: #333;
+                font-family: 'Della Respira';
+        }
+        .popup .close {
+                position: absolute;
+                top: 20px;
+                right:30px;
+                transition: all 200ms;
+                font-size: 30px;
+                font-weight: bold;
+                text-decoration: none;
+                color: #333;
+        }
+        .popup .close:hover {
+                color:orange;
+        }
+        .popup .content {
+                max-height: 30%;
+                overflow: auto;
+                margin-top: 15px;
+        }

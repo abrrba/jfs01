@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--for responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<title> Welcome to Myzone.in</title>
+
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.cycle2.min.js"></script>
+<script type="text/javascript" src="js/make.js"></script>
+<link rel="stylesheet" type="text/css" href="css/page.css">
+
+<script> $(document).ready(function() {
+        var url = window.location.href;
+        var spliturl = url.split("=");
+        var user_name = spliturl[1];
+        if (typeof user_name == "undefined") {
+                user_name = "User"
+        }
+        var welcome = "Welcome ";
+        var welcome_user = welcome.concat(user_name);
+        document.getElementById("member").innerHTML = welcome_user;
+        
+        make_category_table(); 
+
+});
+</script>
+</head>
+<body>
+
+<!-- Header Bar of the page -->
+<div class="header">
+   <div class="logo">
+           <img src="images/logo.png"/>
+   </div>
+
+<!-- Search Bar -->
+   <div class="search">
+    <form action="../08_product_page/product.html">
+      Search <input id="textbox" type="text" name="search" placeholder="Item">
+      <input src="images/search.png" name="submit" type="image">
+    </form>
+    </div>
+
+   <div class="nav-right">
+      <h4 id="member"> </h4> 
+   </div>
+
+   <div class="nav-right nav-below">
+        <h5><a href="../07_login_page/login.html"> Logout </a></h5>
+   </div>
+</div>
+
+<!--End of header bar -->
+
+
+<!--Responsive Image Slider -->
+
+        <!--This class is located within the js cycle2 -->
+        <div class="cycle-slideshow">
+        <span class="cycle-prev">&#9001;</span>
+        <span class="cycle-next">&#9002;</span>
+        <span class="cycle-pager"></span>
+                <img src="images/slide-1.jpg" alt="slide1" width="100%">
+                <img src="images/slide-2.jpg" alt="slide2" width="100%">
+                <img src="images/slide-3.jpg" alt="slide3" width="100%">
+                <img src="images/slide-4.jpg" alt="slide4" width="100%">
+                <img src="images/slide-5.jpg" alt="slide5" width="100%">
+                <img src="images/slide-6.jpg" alt="slide6" width="100%">
+                <img src="images/slide-7.jpg" alt="slide7" width="100%">
+                <img src="images/slide-8.jpg" alt="slide8" width="100%">
+        </div>
+<!--End Responsive Image Slider -->
+
+
+<!--Category Bar -->
+<div id ="category" class="section-heading"> Categories </div>
+<br><br>
+<div id="cat_table" class="category_table"></div>
+<br><br>
+<!--Category Bar End-->
+
+<!--Footer Start -->
+<!-- Our CopyRight footer -->
+<div id="footer">
+               <p> &copy <a href="www.crestrou.com">www.crestrou.com</a></p>
+</div>
+<!--Footer End -->
+</body>
+</html>

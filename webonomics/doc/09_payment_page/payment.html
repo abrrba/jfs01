@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset = "UTF-8"/>
+    <title> Payment Page - MyZone </title>
+    <link rel="stylesheet" type="text/css" href="css/page.css"/>
+    <script type="text/javascript" src="js/payment.js"></script>
+    <script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+
+    <script> 
+    $(document).ready(function() {
+        var url = window.location.href;
+        var spliturl = url.split("=");
+        var prod_name = spliturl[1];
+        var prod_price = spliturl[2];
+        var prod_quantity = spliturl[3];
+    
+        document.getElementById("product_name").innerHTML = prod_name;
+        document.getElementById("product_price").innerHTML = prod_price;
+        document.getElementById("product_quantity").innerHTML = prod_quantity;
+        
+        document.getElementById("p_name").innerHTML = prod_name;
+        document.getElementById("p_price").innerHTML = prod_price;
+        document.getElementById("p_quantity").innerHTML = prod_quantity;
+        document.getElementById("p_name").value = prod_name;
+        document.getElementById("p_price").value = prod_price;
+        document.getElementById("p_quantity").value = prod_quantity;
+    });
+
+   function calculate() {
+       var quantity = document.getElementById('qty').value;
+       var price = document.getElementById('product_price').innerHTML;
+       document.getElementById('total').value = quantity*price;
+   }
+
+   function check_quantity() {
+       var quantity = document.getElementById('qty').value;
+       var url = window.location.href;
+       var spliturl = url.split("=");
+       var prod_quantity = spliturl[3];
+       if (parseInt(quantity,10) > parseInt(prod_quantity,10)) {
+           window.alert("Entered quantity is greater than available with us.");
+       }
+           
+   }
+
+    </script>
+</head>
+
+<body style="background-color:#ff3377">
+   <h1 style="text-align:center"> Welcome to MyZone Payment Page </h1>
+   <div class="product_payment">
+           <p><b>You are placing order for :- </b><b id="product_name"></b></p>
+           <p><b>Cost per piece: Rs. </b><b id="product_price"></b></p>
+           <p><b>Quantity Available: </b><b id="product_quantity"></b></p>
+   </div>
+   
+   <form action="payment.php" method="post">
+           <input id="p_name" name="prod_name" type="hidden" value=""></input>
+           <input id="p_price" name="prod_price" type="hidden" value=""></input>
+           <input id="p_quantity" name="prod_quantity" type="hidden" value=""></input>
+           Payment Options : 
+           <input type="radio" name="cod" value="COD" checked> COD </input>
+           <input type="radio" name="cr" value="CR"> Credit Card</input>
+           <br><br>
+           <label> Name </label><br>
+           <input rows="4" cols="50" placeholder="Please enter your name" name="name" required>
+           <br> <br>
+           <label> Contact Number </label><br>
+           <input rows="4" cols="50" id="contact" placeholder="Please enter your mobile number" name="number" required onchange="validate_num()">
+           <br><br>
+           <label> E-Mail </label><br>
+           <input rows="4" cols="50" placeholder="Please enter your email" name="email" required>
+           <br><br>
+           <label> Quantity </label><br>
+           <input rows="4" cols="50" id="qty" required placeholder="Please enter the quantity" name="quantity" onchange="check_quantity(); calculate();">
+           <br><br>
+           <label> Total </label><br>
+           <input rows="4" cols="50" name="total" id="total" disabled value="">
+           <br><br>
+           <label> Enter Delivery Address </label><br>
+           <textarea rows="4" cols="50" required placeholder="Please enter the Delivery address" name="address"></textarea> 
+           <br><br>
+           <div>
+           <input type="submit" value="Place Order" align="middle">
+           </div>
+   </form>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>4.2. MYSQL &mdash; Webonomics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Webonomics 1.0 documentation" href="../index.html" />
+    <link rel="up" title="4. Introduction" href="00_index.html" />
+    <link rel="next" title="4.3. PHP and MYSQL" href="04_php_mysql.html" />
+    <link rel="prev" title="4.1. PHP and MySql" href="02_php.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Webonomics 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>4.2. MYSQL</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="02_php.html">4.1. PHP and MySql</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="04_php_mysql.html">4.3. PHP and MYSQL</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="mysql">
+<h1>4.2. MYSQL<a class="headerlink" href="#mysql" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic">
+<li><p class="first">It is a data base.</p>
+</li>
+<li><p class="first">Login to the data base using the command</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">mysql</span> <span class="pre">-u</span> <span class="pre">root</span> <span class="pre">-proot123</span></code></p>
+<p><code class="docutils literal"><span class="pre">root</span></code> - is the username, <code class="docutils literal"><span class="pre">-u</span></code> is the flag for username.
+<code class="docutils literal"><span class="pre">root123</span></code> - is the password, <code class="docutils literal"><span class="pre">-p</span></code> is the flag for the password.</p>
+</div></blockquote>
+</li>
+<li><p class="first">See the data bases in MySql</p>
+</li>
+</ol>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">show</span> <span class="pre">databases;</span></code> - notice the semicolon after every command.</div></blockquote>
+<ol class="arabic">
+<li><p class="first">Create Database Myzone;</p>
+<p><code class="docutils literal"><span class="pre">create</span> <span class="pre">database</span> <span class="pre">myzone;</span></code></p>
+</li>
+<li><p class="first">Import the database</p>
+<p><code class="docutils literal"><span class="pre">mysql</span> <span class="pre">-u</span> <span class="pre">root</span> <span class="pre">-proot123</span> <span class="pre">myzone</span> <span class="pre">&lt;</span> <span class="pre">myzone.sql</span></code></p>
+</li>
+<li><p class="first">Use the <code class="docutils literal"><span class="pre">myzone</span></code> database for the next queries.</p>
+<p><code class="docutils literal"><span class="pre">use</span> <span class="pre">myzone;</span></code></p>
+</li>
+<li><p class="first">See the tables in the <code class="docutils literal"><span class="pre">myzone</span></code> database.</p>
+<p><code class="docutils literal"><span class="pre">show</span> <span class="pre">tables</span> <span class="pre">in</span> <span class="pre">myzone;</span></code></p>
+</li>
+<li><p class="first">See the categories in the table <code class="docutils literal"><span class="pre">categories</span></code></p>
+<p><code class="docutils literal"><span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">categories;</span></code></p>
+</li>
+<li><p class="first">See the users in the table <code class="docutils literal"><span class="pre">myzone_users</span></code></p>
+<p><code class="docutils literal"><span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">myzone_users</span></code></p>
+</li>
+<li><p class="first">See the columns in the product table</p>
+<p><code class="docutils literal"><span class="pre">show</span> <span class="pre">columns</span> <span class="pre">in</span> <span class="pre">product_detail;</span></code></p>
+</li>
+<li><p class="first">Count the number of rows in a table.</p>
+<blockquote>
+<div><p><code class="docutils literal"><span class="pre">select</span> <span class="pre">COUNT(*)</span> <span class="pre">from</span> <span class="pre">product_detail;</span></code></p>
+</div></blockquote>
+</li>
+<li><p class="first">Display the rows having &#8216;Watch&#8217; in the name.</p>
+<p><code class="docutils literal"><span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">product_detail</span> <span class="pre">where</span> <span class="pre">prod_name</span> <span class="pre">LIKE</span> <span class="pre">'%Watch%'</span> <span class="pre">;</span></code></p>
+</li>
+<li><p class="first">Display the <code class="docutils literal"><span class="pre">COUNT()</span></code> of the products with <code class="docutils literal"><span class="pre">ELectronics</span></code></p>
+<p><code class="docutils literal"><span class="pre">select</span> <span class="pre">COUNT(*)</span> <span class="pre">from</span> <span class="pre">product_detail</span> <span class="pre">where</span> <span class="pre">prod_name</span> <span class="pre">LIKE</span> <span class="pre">'%Elec%'</span> <span class="pre">;</span></code></p>
+</li>
+</ol>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="02_php.html">4.1. PHP and MySql</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="04_php_mysql.html">4.3. PHP and MYSQL</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garima Agarwal, Rishi Agrawal.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

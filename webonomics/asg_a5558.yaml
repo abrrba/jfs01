@@ -1,0 +1,23 @@
+There is a file which has the following contents.
+
+Roll Number and Names.
+
+::
+
+   Roll|Name
+   19156|Subramanyan Chandrasekhar
+   3111|Venkatraman Ramakrishnan
+   18258|Amartya Sen
+   29385|Har Gobind Khorana
+   17735|Dave Baksh
+   2721|Kim Thayil
+   3188|Norah Jones
+   24341|Tony Kanal
+   19512|Sameer Bhattacharya
+   1098|Ángel Mathai
+
+#.  Write code to insert the nodes in a binary search tree and print the records in a sorted order.
+
+#.  Use interative in order for this.
+
+#.  Print the records in a decsending order.

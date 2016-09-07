@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>8.2. Let Us Start &#8212; Webonomics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Webonomics 1.0 documentation" href="../index.html" />
+    <link rel="up" title="8. Product Page" href="00_index.html" />
+    <link rel="next" title="9. Payment Page" href="../09_payment_page/00_index.html" />
+    <link rel="prev" title="8.1. Product Page" href="01_introduction.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Webonomics 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>8.2. Let Us Start</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="01_introduction.html">8.1. Product Page</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../09_payment_page/00_index.html">9. Payment Page</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="let-us-start">
+<h1>8.2. Let Us Start<a class="headerlink" href="#let-us-start" title="Permalink to this headline">¶</a></h1>
+<p>Let us start section wise and complete each of the requirements</p>
+<p>First we change the background of the page to <code class="docutils literal"><span class="pre">#ff3377</span></code>, as below :</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">body</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background-color:#ff3377&quot;</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Next we create the <code class="docutils literal"><span class="pre">&lt;div&gt;</span></code> for <code class="docutils literal"><span class="pre">Item</span></code> heading and the table for the products to
+display. Below is the code snippet:</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="c">&lt;!--Item div start --&gt;</span>
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section-heading&quot;</span><span class="p">&gt;</span> Items <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;item_tab&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="c">&lt;!--Item div End --&gt;</span>
+</pre></div>
+</div>
+<p>The id <code class="docutils literal"><span class="pre">item_tab</span></code> here is again used to populate the product table using
+Javascript and PHP as we did before in Main Page.</p>
+<p>To call the function to make the product table is located inside a <code class="docutils literal"><span class="pre">&lt;script&gt;</span></code> which is loaded on page load as below :</p>
+<div class="highlight-html"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span> <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+                <span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">spliturl</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;=&quot;</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">cat</span> <span class="o">=</span> <span class="nx">spliturl</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+                <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nx">cat</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;&amp;&quot;</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">category</span> <span class="o">=</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+                <span class="nx">make_product_table</span><span class="p">(</span><span class="nx">category</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>Here, instead of calling the function <code class="docutils literal"><span class="pre">make_product_table()</span></code> directly, we have done some processing which is explained below:</p>
+<ol class="arabic simple">
+<li>Remember, we passed a value as <code class="docutils literal"><span class="pre">?q=name</span></code> in the previous page. Well we need to use it here.</li>
+<li>We will extract the <code class="docutils literal"><span class="pre">name</span></code> part from the URL and pass it to the function <code class="docutils literal"><span class="pre">make_product_table()</span></code>.</li>
+<li>So how do we do that....????????</li>
+<li>The command <code class="docutils literal"><span class="pre">window.location.href;</span></code> fetches the window&#8217;s URL, and we have stored it in a variable <code class="docutils literal"><span class="pre">url</span></code>.</li>
+<li>Using the <code class="docutils literal"><span class="pre">split()</span></code> function, we split the URL with <code class="docutils literal"><span class="pre">=</span></code> as a seperator.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can see the URL and you will know why we have used &#8220;=&#8221; as the seperator</p>
+</div>
+<p>The <code class="docutils literal"><span class="pre">split()</span></code> function returns an array.</p>
+<ol class="arabic simple">
+<li>To point to the <code class="docutils literal"><span class="pre">name</span></code> part, we use <code class="docutils literal"><span class="pre">spliturl[1]</span></code> as the index. It gives us the category name, which has been clicked on the previous page. We then pass this name to our Javascript function.</li>
+</ol>
+<div class="section" id="javascript">
+<h2>8.2.1. Javascript<a class="headerlink" href="#javascript" title="Permalink to this headline">¶</a></h2>
+<p>Now we will look at the <code class="docutils literal"><span class="pre">make_product_table()</span></code> function. Below is the code
+snippet for the same :</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span><span class="kd">function</span> <span class="nx">make_product_table</span> <span class="p">(</span><span class="nx">category</span><span class="p">)</span> <span class="p">{</span>
+<span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="nx">HEAD</span>
+
+    <span class="kd">var</span> <span class="nx">php_page</span> <span class="o">=</span> <span class="s2">&quot;get_item.php&quot;</span> <span class="o">+</span> <span class="s2">&quot;?search=&quot;</span> <span class="o">+</span> <span class="nx">category</span><span class="p">;</span>
+
+    <span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span> <span class="nx">php_page</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">result</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">item_table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;item_tab&#39;</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">desc_table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;desc_tab&#39;</span><span class="p">);</span>
+            <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">numCols</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">row</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="p">;</span>
+            <span class="kd">var</span> <span class="nx">tbl</span> <span class="o">=</span> <span class="s1">&#39;&lt;table border=&quot;1&quot; align=&quot;center&quot; width=&quot;100%&quot;&gt;&lt;tr&gt;&#39;</span><span class="p">;</span>
+
+            <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">k</span> <span class="k">in</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">name</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_name</span><span class="p">;</span>
+                <span class="nx">price</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_price</span><span class="p">;</span>
+                <span class="nx">product</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_image</span><span class="p">;</span>
+                <span class="nx">seller</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_seller</span><span class="p">;</span>
+                <span class="nx">year</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_year</span><span class="p">;</span>
+                <span class="nx">desc</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_desc</span><span class="p">;</span>
+                <span class="nx">quantity</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_quantity</span><span class="p">;</span>
+<span class="o">=======</span>
+        <span class="kd">var</span> <span class="nx">php_page</span> <span class="o">=</span> <span class="s2">&quot;get_item.php&quot;</span> <span class="o">+</span> <span class="s2">&quot;?search=&quot;</span> <span class="o">+</span> <span class="nx">category</span><span class="p">;</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span> <span class="nx">php_page</span><span class="p">).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="nx">result</span> <span class="o">=</span> <span class="nx">jQuery</span><span class="p">.</span><span class="nx">parseJSON</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">item_table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;item_tab&#39;</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">desc_table</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;desc_tab&#39;</span><span class="p">);</span>
+                <span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+                <span class="kd">var</span> <span class="nx">numCols</span> <span class="o">=</span> <span class="mi">5</span><span class="p">;</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>If you see the 2nd line of this code, we have first built the <code class="docutils literal"><span class="pre">php_page</span></code> variable. Can anyone tell, why it has been done so -</li>
+<li>Well, as we passed a value from Main Page to Product Page via the URL, to use it in the Product Page Javascript, we are passing the same value to the PHP page, so that it can use it and fire a query based on that. Now how we will use this variable in php, we will see that when we discuss the PHP section. As of now we will proceed with the Javascript functionality.</li>
+<li>So the PHP page <code class="docutils literal"><span class="pre">get_item.php?search=category</span></code> is called and the items listed under that category are returned in JSON format to Javascript variable <cite>result</cite>.</li>
+<li>Now let us have a closer look over the <code class="docutils literal"><span class="pre">row</span></code> variable, as how it is being built.</li>
+<li>We have first added an image under an <code class="docutils literal"><span class="pre">&lt;a&gt;</span></code> tag so that it is linked to the <code class="docutils literal"><span class="pre">#description</span></code> popup which we will be coding in some time.</li>
+<li>The <code class="docutils literal"><span class="pre">src</span></code> of image is taken from the database table datail.</li>
+<li>Also, there is a <code class="docutils literal"><span class="pre">onclick()</span></code> function called for the image. This in-built event, allows to call a javascript function from HTML input. Here we have call <code class="docutils literal"><span class="pre">make_item_decsription('category,name,seller,year,desc,quantity')</span></code> for the popup.</li>
+<li>Next a <code class="docutils literal"><span class="pre">&lt;div&gt;</span></code> is built to display the Name and Price of the product which is also fetched from the database table.</li>
+<li>Then, we create a <code class="docutils literal"><span class="pre">Buy</span></code> button, which will redirect the user to the Payment Page.</li>
+</ol>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Here also, we have passed the values &#8220;name&#8221;, &#8220;price&#8221; and &#8220;quantity&#8221; to be displayed on the payment page</p>
+</div>
+<ol class="arabic simple">
+<li>And in the end the <code class="docutils literal"><span class="pre">innerHTML</span></code> is built.</li>
+</ol>
+<p>#. Next there is <code class="docutils literal"><span class="pre">make_item_decsription()</span></code> function which builds the popup
+window for the description details of the product.</p>
+<div class="highlight-javascript"><div class="highlight"><pre><span></span>          
+                <span class="k">for</span><span class="p">(</span><span class="kd">var</span> <span class="nx">k</span> <span class="k">in</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+                        <span class="nx">name</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_name</span><span class="p">;</span>
+                        <span class="nx">price</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_price</span><span class="p">;</span>
+                        <span class="nx">product</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_image</span><span class="p">;</span>
+                        <span class="nx">seller</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_seller</span><span class="p">;</span>
+                        <span class="nx">year</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_year</span><span class="p">;</span>
+                        <span class="nx">desc</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_desc</span><span class="p">;</span>
+                        <span class="nx">quantity</span> <span class="o">=</span> <span class="nx">result</span><span class="p">[</span><span class="nx">k</span><span class="p">].</span><span class="nx">prod_quantity</span><span class="p">;</span>
+
+                        <span class="nx">row</span> <span class="o">=</span> <span class="nx">row</span> <span class="o">+</span> <span class="s2">&quot;&lt;td align=\&quot;center\&quot;&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;div style=\&quot;height:230px\&quot;&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;a href=\&quot;#\&quot;&gt;&lt;img id=\&quot;image\&quot;  src = \&quot;&quot;</span> <span class="o">+</span> <span class="nx">product</span> <span class="o">+</span> <span class="s2">&quot;\&quot; onclick=\&quot;make_item_description(\&#39;&quot;</span><span class="o">+</span><span class="nx">category</span><span class="o">+</span><span class="s2">&quot;\&#39;&quot;</span><span class="o">+</span><span class="s2">&quot;,\&#39;&quot;</span><span class="o">+</span><span class="nx">name</span><span class="o">+</span><span class="s2">&quot;\&#39;,\&#39;&quot;</span><span class="o">+</span><span class="nx">seller</span><span class="o">+</span><span class="s2">&quot;\&#39;,\&#39;&quot;</span><span class="o">+</span><span class="nx">quantity</span><span class="o">+</span><span class="s2">&quot;\&#39;,\&#39;&quot;</span><span class="o">+</span><span class="nx">desc</span><span class="o">+</span><span class="s2">&quot;\&#39;,\&#39;&quot;</span><span class="o">+</span><span class="nx">year</span><span class="o">+</span><span class="s2">&quot;\&#39;&quot;</span><span class="o">+</span><span class="s2">&quot;) \&quot;&gt;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&lt;/a&gt;&lt;/div&gt; &lt;div&gt;&lt;h5&gt;&quot;</span> <span class="o">+</span> <span class="nx">name</span>  <span class="o">+</span> <span class="s2">&quot; &lt;/h5&gt;&lt;/div&gt; &lt;div&gt;&lt;h5&gt;Rs. &quot;</span> <span class="o">+</span> <span class="nx">price</span>  <span class="o">+</span> <span class="s2">&quot;&lt;/h5&gt;&lt;/div&gt;&lt;div&gt;&lt;button onclick=\&quot;location.href = &#39;../09_payment_page/payment.html?n=&quot;</span> <span class="o">+</span> <span class="nx">name</span><span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span><span class="nx">price</span> <span class="o">+</span><span class="s2">&quot;&#39;;\&quot;&gt;Buy&lt;/button&gt;&lt;/div&gt; &lt;/td&gt;&quot;</span><span class="p">;</span>
+
+                    <span class="c1">//    row = row + &quot;&lt;td align=\&quot;center\&quot;&gt;&quot; + &quot;&lt;div style=\&quot;height:230px\&quot;&gt;&quot; + &quot;&lt;img src = \&quot;&quot; + product + &quot;\&quot; onclick=\&quot;make_item_description(\&#39;&quot;+category+&quot;\&#39;&quot;+&quot;,\&#39;&quot;+name+&quot;\&#39;,\&#39;&quot;+seller+&quot;\&#39;,\&#39;&quot;+quantity+&quot;\&#39;,\&#39;&quot;+desc+&quot;\&#39;,\&#39;&quot;+year+&quot;\&#39;&quot;+&quot;) \&quot;&gt;&quot; + &quot;&lt;/div&gt; &lt;div&gt;&lt;h5&gt;&quot; + name  + &quot; &lt;/h5&gt;&lt;/div&gt; &lt;div&gt;&lt;h5&gt;Rs. &quot; + price  + &quot;&lt;/h5&gt;&lt;/div&gt;&lt;div&gt;&lt;button onclick=\&quot;location.href = &#39;../09_payment_page/payment.html?n=&quot; + name+ &quot;=&quot; +price +&quot;&#39;;\&quot;&gt;Buy&lt;/button&gt;&lt;/div&gt; &lt;/td&gt;&quot;;</span>
+                        <span class="c1">//window.alert(row);</span>
+                        <span class="k">if</span> <span class="p">(</span><span class="nx">j</span><span class="o">%</span><span class="nx">numCols</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+</pre></div>
+</div>
+<p>The corresponding CSS are written in the CSS file that you already have with
+you.</p>
+</div>
+<div class="section" id="php">
+<h2>8.2.2. PHP<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h2>
+<p>Now we will walkthrough the <code class="docutils literal"><span class="pre">get_item.php</span></code> code.</p>
+<div class="highlight-php"><div class="highlight"><pre><span></span><span class="cp">&lt;?php</span>
+
+<span class="nv">$category</span> <span class="o">=</span> <span class="nv">$_GET</span><span class="p">[</span><span class="s1">&#39;search&#39;</span><span class="p">];</span>
+
+<span class="nv">$query_cat</span> <span class="o">=</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">.</span><span class="nv">$category</span><span class="o">.</span><span class="s2">&quot;&#39;&quot;</span><span class="p">;</span>
+<span class="nv">$query_search</span> <span class="o">=</span> <span class="s2">&quot;&#39;&quot;</span><span class="o">.</span><span class="s2">&quot;%&quot;</span><span class="o">.</span><span class="nv">$category</span><span class="o">.</span><span class="s2">&quot;%&quot;</span><span class="o">.</span><span class="s2">&quot;&#39;&quot;</span><span class="p">;</span>
+
+<span class="c1">// create connection</span>
+<span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span> <span class="nx">HEAD</span>
+<span class="k">try</span> <span class="p">{</span>
+
+        <span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:host=localhost;dbname=myzone&#39;</span><span class="p">,</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span> <span class="s1">&#39;root123&#39;</span><span class="p">);</span>
+<span class="o">=======</span>
+<span class="nv">$pdo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">PDO</span><span class="p">(</span><span class="s1">&#39;mysql:host=localhost;dbname=myzone&#39;</span><span class="p">,</span> <span class="s1">&#39;root&#39;</span><span class="p">,</span> <span class="s1">&#39;root123&#39;</span><span class="p">);</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> <span class="nx">master</span>
+        <span class="nv">$statement</span> <span class="o">=</span> <span class="nv">$pdo</span><span class="o">-&gt;</span><span class="na">query</span><span class="p">(</span><span class="s2">&quot;SELECT * FROM product_detail WHERE prod_category=</span><span class="si">$query_cat</span><span class="s2"> OR prod_name LIKE </span><span class="si">$query_search</span><span class="s2">&quot;</span><span class="p">);</span>
+        <span class="nv">$row</span> <span class="o">=</span> <span class="nv">$statement</span><span class="o">-&gt;</span><span class="na">fetchALL</span><span class="p">(</span><span class="nx">PDO</span><span class="o">::</span><span class="na">FETCH_ASSOC</span><span class="p">);</span>
+        <span class="k">echo</span> <span class="nb">json_encode</span><span class="p">(</span><span class="nv">$row</span><span class="p">);</span>
+
+    <span class="p">}</span> <span class="k">catch</span><span class="p">(</span><span class="nx">PDOException</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+
+        <span class="k">echo</span> <span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">();</span>
+</pre></div>
+</div>
+<ol class="arabic simple">
+<li>Here first we extract the <code class="docutils literal"><span class="pre">category</span></code> value which was passed from the Javascript while calling the PHP page.</li>
+<li>Then we create a variable <code class="docutils literal"><span class="pre">query_cat</span></code> to use it while writing the fetch query. Here we have appended quotes with the category name.</li>
+<li>Also we create a variable <code class="docutils literal"><span class="pre">query_search</span></code> for the search string that was
+entered in the search bar of the Main Page.</li>
+<li>Then as before, we first create a connection with the DB, and then execute the Query to extract all the items in the <code class="docutils literal"><span class="pre">product_detail</span></code> table, where the
+category is specified as the one which user has clicked or entered in the search bar.</li>
+<li>The result array of items is send back to Javascript in JSON format.</li>
+<li>The user is then redirected to the Payment Page.</li>
+</ol>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="01_introduction.html">8.1. Product Page</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="../09_payment_page/00_index.html">9. Payment Page</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Garima Agarwal, Rishi Agrawal.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.6.
+    </div>
+  </body>
+</html>

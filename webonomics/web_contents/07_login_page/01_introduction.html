@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>5.1. Login Page &mdash; Webonomics 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/haiku.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="top" title="Webonomics 1.0 documentation" href="../index.html" />
+    <link rel="up" title="5. Introduction" href="00_index.html" />
+    <link rel="next" title="5.2. Login Page" href="03_login.html" />
+    <link rel="prev" title="5. Introduction" href="00_index.html" /> 
+  </head>
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../index.html">
+          <span>Webonomics 1.0 documentation</span></a></h1>
+        <h2 class="heading"><span>5.1. Login Page</span></h2>
+      </div>
+      <div class="topnav" role="navigation" aria-label="top navigation">
+      
+        <p>
+        «&#160;&#160;<a href="00_index.html">5. Introduction</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="03_login.html">5.2. Login Page</a>&#160;&#160;»
+        </p>
+
+      </div>
+      <div class="content">
+        
+        
+  <div class="section" id="login-page">
+<h1>5.1. Login Page<a class="headerlink" href="#login-page" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will create the login page for user login on the website. It
+will have authentication system.</p>
+<div class="section" id="requirement">
+<h2>5.1.1. Requirement<a class="headerlink" href="#requirement" title="Permalink to this headline">¶</a></h2>
+<p>Let us have a look on the basic requirement of this page.</p>
+<p>Our Final Page would look like this.</p>
+<a class="reference internal image-reference" href="../_images/login.png"><img alt="../_images/login.png" class="align-center" src="../_images/login.png" style="width: 500px; height: 400px;" /></a>
+<p><code class="docutils literal"><span class="pre">Note:</span> <span class="pre">The</span> <span class="pre">colors</span> <span class="pre">in</span> <span class="pre">the</span> <span class="pre">above</span> <span class="pre">image</span> <span class="pre">and</span> <span class="pre">our</span> <span class="pre">actual</span> <span class="pre">output</span> <span class="pre">may</span> <span class="pre">vary.</span></code></p>
+<p>Web Page should have -</p>
+<ol class="arabic simple">
+<li>A header with the company logo in the left and Company Name <code class="docutils literal"><span class="pre">Myzone.in</span></code> in the center.</li>
+</ol>
+<div class="admonition-todo admonition" id="index-0">
+<p class="first admonition-title">Todo</p>
+<p class="last">insert bullets properly</p>
+</div>
+<ol class="arabic simple">
+<li>Color of the header part would be different from the body.</li>
+<li>Then the heading <code class="docutils literal"><span class="pre">Login</span></code> will be in the center.</li>
+</ol>
+<p>#. Two text box for <code class="docutils literal"><span class="pre">Username</span></code> and <code class="docutils literal"><span class="pre">Password</span></code> should be there, each with
+respective label.</p>
+<ol class="arabic simple">
+<li>It will take input from the user to login to the website or to sign-up.</li>
+<li>Two buttons below - One for SignIn and other for SignUp.</li>
+</ol>
+<p>#. When the user sign-in, the query will be triggered to the <strong>myzone_user</strong>
+database with the <code class="docutils literal"><span class="pre">username</span> <span class="pre">and</span> <span class="pre">password</span></code>.</p>
+<p>#. If the user exists and password is correct, he is redirected to the <code class="docutils literal"><span class="pre">Main</span>
+<span class="pre">Page</span></code>.</p>
+<p>#. If the user is present, but the password is incorrect, it flags an error
+message.</p>
+<p>#. If the user is not present, it asks to sign-up, by taking the username and
+password.</p>
+<p>#. If then the username exists, it shows en error message, else an account is
+created for that user, and he is redirected to the <code class="docutils literal"><span class="pre">Main</span> <span class="pre">Page</span></code>.</p>
+<ol class="arabic simple">
+<li>In the end, the footer has the website name with copyright information.</li>
+</ol>
+</div>
+</div>
+
+
+      </div>
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
+      
+        <p>
+        «&#160;&#160;<a href="00_index.html">5. Introduction</a>
+        &#160;&#160;::&#160;&#160;
+        <a class="uplink" href="../index.html">Contents</a>
+        &#160;&#160;::&#160;&#160;
+        <a href="03_login.html">5.2. Login Page</a>&#160;&#160;»
+        </p>
+
+      </div>
+
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Garima Agarwal, Rishi Agrawal.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+    </div>
+  </body>
+</html>

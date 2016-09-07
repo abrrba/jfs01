@@ -1,0 +1,25 @@
+#############
+PHP and MySql
+#############
+
+===
+PHP
+===
+
+This is an introduction to Advanced PHP concepts.
+
+#.  Syntax: Same as ``C`` Programming language.
+
+#.  Almost everything is same. We will tell you whenever is required.
+
+#.  This is the ``server side scripting``.
+
+#.  Write the following program and see the output for yourself.
+
+#.  Save the program as ``01.php``
+
+#.  Run the program as ``php 01.php``
+
+.. literalinclude:: examples/01.php
+   :language: php
+   :linenos:
