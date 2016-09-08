@@ -66,19 +66,29 @@ class MysqlCon{
         try {  
             Class.forName("com.mysql.jdbc.Driver");  
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/webonomics","root","root123");  
-
             Statement stmt=con.createStatement();  
-
-            // ResultSet rs=stmt.executeQuery("select prod_id,prod_seller,prod_year from product_detail");  
             ResultSet rs=stmt.executeQuery("select * from product_detail");  
-            
             while(rs.next()) {  
-//                System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
                 ProductRecord p = new ProductRecord(rs);
                 p.PrintRecords();
             }
-
             con.close();  
+
+        } catch (Exception e){ System.out.println(e);}  
+        
+        // Inserting some records.
+        try {  
+            Class.forName("com.mysql.jdbc.Driver");  
+            Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/webonomics","root","root123");  
+            String query = " insert into users (user_id, password)" + " values (?, ?)";
+            PreparedStatement preparedStmt = con.prepareStatement(query);   
+            preparedStmt.setString (1, "rohit");                      
+            preparedStmt.setString (2, "rishi123");                    
+
+            // execute the preparedstatement                                
+            preparedStmt.execute();                                         
+
+            con.close();                                      
 
         } catch (Exception e){ System.out.println(e);}  
 
