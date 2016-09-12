@@ -1,0 +1,53 @@
+
+
+//import java.util.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+//import java.net.URL;
+import java.sql.*;
+	class MysqlCon{
+		public static void main(String args[]){
+			String name = null;
+			String std = null;
+			String roll = null;
+			String marks = null;
+			 PreparedStatement ps = null;
+			try{
+				//URL url = Test.class.getClassLoader().getResource("myfile.txt");
+				FileReader fr = new FileReader("/home/dattaraj/workspace/jdbc/src/abc.txt");
+				BufferedReader br = new BufferedReader(fr);
+				String thisLine = br.readLine();
+				while(thisLine != null){
+					String temp[] = thisLine.split(":");
+					name = temp[0];
+					std = temp[1];
+					roll = temp[2];
+					marks = temp[3];
+					
+				}
+				String str = "insert into stud3(name varchar(225),std varchar(121),roll varchar(123),marks varchar(123)values("+name+","+std+","+roll+","+marks+"))";
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/test","root","root123");
+				
+				//Statement stmt=con.createStatement();
+				
+				//ResultSet rs=stmt.executeQuery(str);
+		
+				ps = con.prepareStatement(str);
+				ps.executeUpdate();
+				//while(rs.next()){
+					//System.out.println(rs.getString(1));
+					System.out.println(name + std + roll + marks);
+				//}
+				br.close();
+				
+				con.close();
+			}catch (Exception e) {System.out.println(e);}
+			
+			
+		}
+		
+		
+	}
+
+
