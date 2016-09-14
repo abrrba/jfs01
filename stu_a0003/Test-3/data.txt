@@ -1,0 +1,10 @@
+dnyan1|A|1|40
+dnyan2|A|2|50
+dnyan3|B|3|60
+dnyan4|A|4|30
+dnyan5|B|5|40
+dnyan6|A|6|70
+dnyan7|A|7|55
+dnyan8|C|8|44
+dnyan9|A|9|49
+dnyan10|C|10|51
