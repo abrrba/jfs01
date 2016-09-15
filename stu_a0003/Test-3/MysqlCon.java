@@ -22,9 +22,7 @@ class MysqlCon{
 			stmt.executeUpdate(query);
 			while(s!=null){
 				String[] str = s.split("-");
-				
 				int str1 = Integer.parseInt(str[2]);
-
 				int str2 = Integer.parseInt(str[3]);
 				String query1 ="insert into Students(Name,Class,Roll,Marks) "+"values(?, ?, ?, ?)";
 				PreparedStatement ps = con.prepareStatement(query1);
@@ -37,9 +35,16 @@ class MysqlCon{
 				s=br.readLine();
 				
 			}
-
+			BinaryTree bt = new BinaryTree();
+			String query2 = "select * from Students";
+			ResultSet rs = stmt.executeQuery(query2);
+			while(rs.next()){
+				bt.insert(rs.getInt("Roll"),rs.getInt("Marks"),rs.getString("Name"),rs.getString("Class"));
+			}
 			con.close();  
-
+			System.out.println("Given List in Post Order :");
+			bt.postorder();
+		//	bt.printAll();
 		} catch (Exception e){ System.out.println(e);}  
 
 	}

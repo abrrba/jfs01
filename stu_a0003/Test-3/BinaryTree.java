@@ -15,13 +15,13 @@ class BinaryTree{
                 }
                 else
                 {
-                        if(roll<=node.roll)
+                        if(mark<=node.mark)
                         {
-                                node.left=insert(node.left,roll,mark,name.clas);
+                                node.left=insert(node.left,roll,mark,name,clas);
                         }
                         else
                         {
-                                node.right=insert(node.right,roll,mark,name.clas);
+                                node.right=insert(node.right,roll,mark,name,clas);
                         }
                 }
                 return node;
@@ -37,9 +37,18 @@ class BinaryTree{
 		{
 			postorder(r.left);
 			postorder(r.right);
-			System.out.print(r.roll,mark,name,clas);
+			System.out.println(""+ r.roll + " " + r.mark +" "+r.name+" "+r.clas);
 		}
 	}
-
+	public void printAll(){
+		printAll(root);
+	}
+	public void printAll(Node root){
+		if(root!=null){
+			printAll(root.left);
+			System.out.println("Roll :" + root.roll +"  Name :" +root.name +"  Class :"+root.clas+"  Marks :"+root.mark);
+			printAll(root.right);
+		}
+	}
 	
 }
