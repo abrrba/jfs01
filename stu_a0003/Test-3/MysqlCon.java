@@ -17,21 +17,27 @@ class MysqlCon{
 			Statement stmt=con.createStatement();
 			BufferedReader br = new BufferedReader(new FileReader("data.txt"));
 			String s = br.readLine();
-		       // String query="create table Students(Name varchar(20),Class varchar(20),Roll int,Marks int)";
-			//PreparedStatement ps = con.preparedStatment(query);
-		//	stmt.executeUpdate(query);
+		        String query="create table Students(Name varchar(20),Class varchar(20),Roll int,Marks int)";
+			PreparedStatement ps1 = con.prepareStatement(query);
+			stmt.executeUpdate(query);
 			while(s!=null){
-				String[] str = s.split("|");
+				String[] str = s.split("-");
+				
 				int str1 = Integer.parseInt(str[2]);
+
 				int str2 = Integer.parseInt(str[3]);
 				String query1 ="insert into Students(Name,Class,Roll,Marks) "+"values(?, ?, ?, ?)";
 				PreparedStatement ps = con.prepareStatement(query1);
+
 				ps.setString(1,str[0]);
 				ps.setString(2,str[1]);
 				ps.setInt(3,str1);
 				ps.setInt(4,str2);
 				ps.execute();
+				s=br.readLine();
+				
 			}
+
 			con.close();  
 
 		} catch (Exception e){ System.out.println(e);}  
