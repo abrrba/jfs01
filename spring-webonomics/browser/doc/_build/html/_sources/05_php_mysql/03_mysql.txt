@@ -1,0 +1,48 @@
+=====
+MYSQL
+=====
+
+#. It is a data base.
+
+#. Login to the data base using the command
+
+    ``mysql -u root -proot123``
+
+    ``root`` - is the username, ``-u`` is the flag for username.
+    ``root123`` - is the password, ``-p`` is the flag for the password.
+
+#.   See the data bases in MySql
+    
+    ``show databases;`` - notice the semicolon after every command.
+
+#.  Use the ``myzone`` database for the next queries.
+
+    ``use myzone;``
+
+#.  See the tables in the ``myzone`` database.
+
+    ``show tables in myzone;``
+
+#.  See the categories in the table ``categories``
+
+    ``select * from categories;``
+
+#.  See the users in the table ``myzone_users``
+
+    ``select * from myzone_users``
+
+#.  See the columns in the product table
+
+    ``show columns in product_detail;``
+
+#. Count the number of rows in a table.
+
+    ``select COUNT(*) from product_detail;``
+
+#.  Display the rows having 'Watch' in the name.
+
+    ``select * from product_detail where prod_name LIKE '%Watch%' ;``
+
+#.  Display the ``COUNT()`` of the products with ``ELectronics``
+
+    ``select COUNT(*) from product_detail where prod_name LIKE '%Elec%' ;``
