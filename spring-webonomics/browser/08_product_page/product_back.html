@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Product Page </title>
+<link rel="stylesheet" type="text/css" href="css/page.css"/>
+<script type="text/javascript" src="js/item.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script> $(document).ready(function() {
+                var url = window.location.href;
+                var spliturl = url.split("=");
+                var cat = spliturl[1];
+                var x = cat.split("&");
+                var category = x[0];
+                make_product_table(category);
+});
+</script>
+</head>
+<body style="background-color:#ff3377">
+
+<!--Item div start -->
+<div class="section-heading"> Items </div>
+        <div id="item_tab"></div>
+<!--Item div End -->
+
+<!--Division for product popup -->
+
+<div id="desc_table"> </div>
+<!-- <div class="overlay"> -->
+   <!-- <div class="popup">
+        <h2> watch </h2>
+        <a class="close" href="#">x </a>
+                <div class="content">
+                        <p> description </p>
+                </div>
+        </div> -->
+<!-- </div>
+</div> -->
+
+<!--End -->
+<!-- Item Bar End -->
+
+</body>
+</html>
