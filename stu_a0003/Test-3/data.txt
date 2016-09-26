@@ -1,0 +1,10 @@
+dnan1-A-1-40
+dnan2-A-2-50
+dnan3-B-3-60
+dnan4-A-4-30
+dnan5-B-5-40
+dnan6-A-6-70
+dnan7-A-7-55
+dnan8-C-8-44
+dnan9-A-9-49
+dnan10-C-10-51

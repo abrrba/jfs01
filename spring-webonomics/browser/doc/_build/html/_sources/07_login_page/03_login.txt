@@ -1,0 +1,35 @@
+==========
+Login Page
+==========
+
+#.  We will now work on the Login Page.
+
+#.  We have see all the blocks and tags before, we just need to write the code 
+    here.
+
+#.  First let us write some CSS for our selves. 
+    
+.. note:: You can copy the CSS file from the reference directory.
+
+.. literalinclude:: login.css
+    :linenos:
+    :language: css
+
+#.  We will now create the login page. Here we will write everything and see the output.
+
+.. note::   You have the login.html file in the reference directory. Refer it only in case of 
+            confusions or errors.
+
+.. literalinclude:: login.html
+    :linenos:
+    :language: html
+
+#.  We now need to write the server side script which will connect to the database and see
+    if the user is present in the data base or no. 
+
+.. note::   You have the ``login.php`` in the reference directory. Refer only in case of errors
+            or confusions.
+
+.. literalinclude:: login.php
+    :linenos:
+    :language: php

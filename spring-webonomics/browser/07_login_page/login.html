@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<!-- We are starting a html document -->
+<!-- -->
+<html>
+
+<!-- The Head-->
+<head>
+
+
+<!-- Charset -->
+<meta charset="UTF-8">
+
+<!-- Title -->
+<title> Login Page - Myzone </title>
+
+
+<!-- StyleSheets-->
+<link rel="stylesheet" type="text/css" href="login.css">
+
+
+<!-- End of Head -->
+</head>
+
+
+<!-- Start the Body -->
+<body>
+
+<div class="header">
+<!-- Make a Div to put the logo. -->
+        <div class="logo">
+                <img src="images/logo.png">
+        </div>
+
+
+<!-- Make a div to put the name. -->
+        <div class="name">
+                <h1> MyZone.in </h1>
+        </div>
+</div>
+
+
+
+<!-- Make the login block -->
+<div class="login_block">
+        
+        
+<!--  See the login.css for the properties of the class. -->
+        <div class="login">
+                <p><b>Login</b> </p>
+        </div>
+
+
+<!-- We have seen form already. Here we just need to make a form and take
+     the appropriate inputs. We will take username and password. 
+     
+     We are using ``placeholder`` to explain what needs to be entered. -->
+
+        <form action="login.php" method="post">
+                Username <input id="textbox" type="text" name="uname" required placeholder="Enter username" size="60">
+                <br>
+                <br>
+                Password <input id="textbox" type="password" name="pwd" required placeholder="Min length of password is 8" size="60">
+                <br>
+
+                <!-- User can do two actions, either sign in or sign up.
+                     SignIn will check if the user is present on the database or no.
+                     
+                     SignUp will insert the user into the data base.
+                -->
+                
+                <input type="submit" name="signin" value="Sign In" id="sign"></input>
+                <input type="submit" name="signup" value="Sign Up" id="sign"></input>
+        </form>
+</div>
+
+<!-- Our CopyRight footer -->
+<div id="footer">
+               <p> &copy <a href="www.crestrou.com">www.crestrou.com</a></p>
+</div>
+
+<!-- Close the body and html tags -->
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title> Product Page </title>
+<link rel="stylesheet" type="text/css" href="css/page.css"/>
+<script type="text/javascript" src="js/item.js"></script>
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script> $(document).ready(function() {
+        var data = $.ajax({url: "http://localhost:8080/productDBList", success: function(result) {
+
+                for(i = 0; i < 10; i++)
+                {
+                        $("#productTable").append(
+                                "<tr>" + 
+                                        "<td>" + JSON.stringify(result[i].prod_id)  + "</td>" +
+                                        "<td>" + JSON.parse(JSON.stringify(result[i].prod_name))  + "</td>" +
+                                        "<td>" + JSON.parse(JSON.stringify(result[i].prod_seller))  + "</td>" +
+                                        "<td>" + JSON.parse(JSON.stringify(result[i].prod_year))  + "</td>" +
+                                        "<td>" + JSON.parse(JSON.stringify(result[i].prod_price))  + "</td>" +
+                                        "<td>" + JSON.parse(JSON.stringify(result[i].prod_desc))  + "</td>" +
+                                        "<td>" + JSON.stringify(result[i].prod_quantity)  + "</td>" +
+                                        "<td><img src='" + JSON.parse(JSON.stringify(result[i].prod_image))  + "'></td>" +
+                                "</tr>"
+                        );
+                }
+        }});
+});
+</script>
+</head>
+<body style="background-color:#ff3377">
+
+<!--Item div start -->
+<div class="section-heading"> Items </div>
+        <div id="item_tab"></div>
+<!--Item div End -->
+
+<!--Division for product popup -->
+
+<div id="desc_table"> </div>
+<table id="productTable" border="1" align="center" style="text-align:center;padding:10px;">
+        <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>SELLER</th>
+                <th>YEAR OF PRODUCTION</th>
+                <th>PRICE</th>
+                <th>DESCRIPTION</th>
+                <th>QUANTITY AVAILABLE</th>
+                <th>PRODUCT IMAGE</th>
+        </tr>
+</table>
+<!-- <div class="overlay"> -->
+   <!-- <div class="popup">
+        <h2> watch </h2>
+        <a class="close" href="#">x </a>
+                <div class="content">
+                        <p> description </p>
+                </div>
+        </div> -->
+<!-- </div>
+</div> -->
+
+<!--End -->
+<!-- Item Bar End -->
+
+</body>
+</html>
