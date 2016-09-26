@@ -1,0 +1,5 @@
+Ram=HSC=11=60
+Shyam=SSC=21=65
+John=BE=31=60
+Tom=ME=41=61
+Shaun=MS=51=63
