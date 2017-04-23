@@ -3,6 +3,7 @@ public class MainAsgA0016{
 	{
 		AsgA0016 temp = new AsgA0016();
 		System.out.println(temp.is_consonant('t'));
+		System.out.println(temp.is_consonant(10));
 
 	} 
 }

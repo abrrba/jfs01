@@ -1,15 +1,12 @@
 class BinaryTree{
 	private BinaryNode root;
-	
 	BinaryTree(){
 		root = null;
 	
 	}
-		
 	public void insert(int data,String name){
 		root=insert(root,data,name);
 	}
-
 	public BinaryNode insert(BinaryNode node,int data,String name){
 		if(node==null){
 			node=new BinaryNode(data,name);
@@ -32,20 +29,18 @@ class BinaryTree{
 			node=new BinaryNode(data,name);
 		}
 		else{
-			if(data>=node.getData()){
-				node.left=insert(node.left,data,name);
+			if(data<=node.getData()){
+				node.right=insert(node.right,data,name);
 			}
 			else{
-				node.right=insert(node.right,data,name);
+				node.left=insert(node.left,data,name);
 			}
 		}
 		return node;
 	}
-
 	public void inorder(){
 		inorder(root);
 	}
-
 	public void inorder(BinaryNode r){
 		if(r!=null){
 			inorder(r.getLeft());

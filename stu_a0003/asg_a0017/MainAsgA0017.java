@@ -3,5 +3,6 @@ public static void main(String arg[])
 {
 AsgA0017 temp = new AsgA0017();
 System.out.println(temp.profit(-100.0,20.0));
+System.out.println(temp.profit(10,3));
 }
 }

@@ -17,7 +17,7 @@ class MysqlCon{
 			Statement stmt=con.createStatement();
 			BufferedReader br = new BufferedReader(new FileReader("data.txt"));
 			String s = br.readLine();
-		        String query="create table Students(Name varchar(20),Class varchar(20),Roll int,Marks int)";
+	        String query="create table Students(Name varchar(20),Class varchar(20),Roll int,Marks int)";
 			PreparedStatement ps1 = con.prepareStatement(query);
 			stmt.executeUpdate(query);
 			while(s!=null){
