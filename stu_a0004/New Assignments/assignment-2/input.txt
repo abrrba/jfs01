@@ -1,0 +1,4 @@
+gm|good morning
+ga|good afternoon
+gn|good night
+ok|okay
